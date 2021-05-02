@@ -1,6 +1,11 @@
 # Predicting Future Red/Blue States
+![](images/map_header.PNG)
 
-## Google Slides (Draft Version)
+## Machine Learning Module
+
+## Database
+
+## Presentation (Google Slides)
 [Link to Google Slides Presentation](https://docs.google.com/presentation/d/1Fi2ku2yF1nq2R5zSuyaotLsO4VyYtfnHJCpFY3X6e9w/edit?usp=sharing)
 
 ### Slide 1
