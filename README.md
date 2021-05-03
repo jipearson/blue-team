@@ -1,4 +1,4 @@
-# Predicting Future Red/Blue States
+# Predicting Presidential Elections at the State Level
 ![](images/map_header.PNG)
 
 ## Machine Learning Module
