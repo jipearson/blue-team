@@ -4,7 +4,7 @@
 ## Machine Learning Module
 
 ## Database
-- ERD <br> ![](images/ERD.PNG)
+- ERD <br> ![](images/ERD.png)
 ## Presentation (Google Slides)
 [Link to Google Slides Presentation](https://docs.google.com/presentation/d/1Fi2ku2yF1nq2R5zSuyaotLsO4VyYtfnHJCpFY3X6e9w/edit?usp=sharing)
 
