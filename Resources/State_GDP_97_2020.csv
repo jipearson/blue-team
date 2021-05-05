@@ -1,0 +1,1225 @@
+Year,State,GDP_Millions
+1997,Texas,610141.2
+1998,Texas,645289.5
+1999,Texas,680181.9
+2000,Texas,738804.4
+2001,Texas,772909.2
+2002,Texas,787719.8
+2003,Texas,829722.9
+2004,Texas,907476.2
+2005,Texas,986202.7
+2006,Texas,1084171.8
+2007,Texas,1178221.1
+2008,Texas,1236361.8
+2009,Texas,1162971.8
+2010,Texas,1237304
+2011,Texas,1331138.4
+2012,Texas,1410447.8
+2013,Texas,1500554.3
+2014,Texas,1568070.8
+2015,Texas,1564374.3
+2016,Texas,1567687.1
+2017,Texas,1665428
+2018,Texas,1795635.1
+2019,Texas,1843802.7
+2020,Texas,1759734.4
+1997,New York,718804
+1998,New York,744716.1
+1999,New York,792569
+2000,New York,836201.5
+2001,New York,873780.7
+2002,New York,884104.3
+2003,New York,902544.3
+2004,New York,952281.8
+2005,New York,1012180.8
+2006,New York,1068634.7
+2007,New York,1109748.6
+2008,New York,1101636.8
+2009,New York,1150993.9
+2010,New York,1212485.1
+2011,New York,1237277.6
+2012,New York,1323400.8
+2013,New York,1361962.9
+2014,New York,1425724.1
+2015,New York,1485620.8
+2016,New York,1545987.7
+2017,New York,1608890.2
+2018,New York,1705010.2
+2019,New York,1772260.7
+2020,New York,1699044.7
+1997,Florida,401688.9
+1998,Florida,429188.3
+1999,Florida,456797.9
+2000,Florida,488466.1
+2001,Florida,516558.8
+2002,Florida,548397.8
+2003,Florida,583447.2
+2004,Florida,636087.5
+2005,Florida,697260.1
+2006,Florida,744660.6
+2007,Florida,768568.1
+2008,Florida,750972.8
+2009,Florida,725658.1
+2010,Florida,738242.3
+2011,Florida,746535.3
+2012,Florida,768722.9
+2013,Florida,800886
+2014,Florida,840386.4
+2015,Florida,897754.7
+2016,Florida,941561.2
+2017,Florida,990096.6
+2018,Florida,1050298.4
+2019,Florida,1106500.1
+2020,Florida,1095888.2
+1997,District of Columbia,52483.3
+1998,District of Columbia,54780.2
+1999,District of Columbia,58751.3
+2000,District of Columbia,61033.2
+2001,District of Columbia,65518.4
+2002,District of Columbia,70072.6
+2003,District of Columbia,74178.3
+2004,District of Columbia,80557.4
+2005,District of Columbia,85349.2
+2006,District of Columbia,88580.5
+2007,District of Columbia,94036.8
+2008,District of Columbia,99532.3
+2009,District of Columbia,100916.9
+2010,District of Columbia,106097.8
+2011,District of Columbia,109998.8
+2012,District of Columbia,112610
+2013,District of Columbia,115021.1
+2014,District of Columbia,119722.8
+2015,District of Columbia,124853.7
+2016,District of Columbia,129477.1
+2017,District of Columbia,132853.6
+2018,District of Columbia,138773.5
+2019,District of Columbia,143389.3
+2020,District of Columbia,143532.7
+1997,Washington,193770.2
+1998,Washington,209710.4
+1999,Washington,230237.4
+2000,Washington,238137.1
+2001,Washington,239763.4
+2002,Washington,248152.7
+2003,Washington,257830.2
+2004,Washington,269983
+2005,Washington,295858.7
+2006,Washington,317313.8
+2007,Washington,346491.1
+2008,Washington,355596.6
+2009,Washington,353705.5
+2010,Washington,365799.7
+2011,Washington,379796.4
+2012,Washington,400623.3
+2013,Washington,419671.3
+2014,Washington,442930
+2015,Washington,471702.8
+2016,Washington,493634.5
+2017,Washington,527707.5
+2018,Washington,575416.7
+2019,Washington,612996.5
+2020,Washington,618704.9
+1997,Colorado,136916.6
+1998,Colorado,150364.4
+1999,Colorado,164132
+2000,Colorado,180693.3
+2001,Colorado,187546.2
+2002,Colorado,191062.2
+2003,Colorado,196768.6
+2004,Colorado,204374.6
+2005,Colorado,220307.4
+2006,Colorado,231256.3
+2007,Colorado,246151
+2008,Colorado,255830.2
+2009,Colorado,248669.1
+2010,Colorado,255660.7
+2011,Colorado,264310.2
+2012,Colorado,273593.9
+2013,Colorado,288383.5
+2014,Colorado,305690.9
+2015,Colorado,317992.4
+2016,Colorado,327757.3
+2017,Colorado,348175.5
+2018,Colorado,372452.9
+2019,Colorado,392986
+2020,Colorado,390098.7
+1997,Michigan ,299692.9
+1998,Michigan ,312667.6
+1999,Michigan ,337834.5
+2000,Michigan ,351641.3
+2001,Michigan ,348642.7
+2002,Michigan ,362311
+2003,Michigan ,372965.9
+2004,Michigan ,381443.4
+2005,Michigan ,394141.2
+2006,Michigan ,395685.3
+2007,Michigan ,403717.4
+2008,Michigan ,385990.3
+2009,Michigan ,365552.7
+2010,Michigan ,386629.8
+2011,Michigan ,401069.1
+2012,Michigan ,418742.3
+2013,Michigan ,433755.8
+2014,Michigan ,448572.1
+2015,Michigan ,473149.5
+2016,Michigan ,488962.6
+2017,Michigan ,501914.9
+2018,Michigan ,521803.4
+2019,Michigan ,536888.3
+2020,Michigan ,515928.3
+1997,North Carolina,234009.7
+1998,North Carolina,246928.6
+1999,North Carolina,264836.2
+2000,North Carolina,277994.1
+2001,North Carolina,288184.8
+2002,North Carolina,297906.7
+2003,North Carolina,309351.3
+2004,North Carolina,327275.9
+2005,North Carolina,351337.3
+2006,North Carolina,382799
+2007,North Carolina,396632.2
+2008,North Carolina,413064.9
+2009,North Carolina,406832.9
+2010,North Carolina,415710
+2011,North Carolina,426569.3
+2012,North Carolina,439539.7
+2013,North Carolina,455266.8
+2014,North Carolina,476260.2
+2015,North Carolina,502808.4
+2016,North Carolina,520356.6
+2017,North Carolina,541040.7
+2018,North Carolina,567451.7
+2019,North Carolina,591600.9
+2020,North Carolina,586136.2
+1997,Alabama,104716.9
+1998,Alabama,110181.3
+1999,Alabama,115833.1
+2000,Alabama,120132.9
+2001,Alabama,123035.3
+2002,Alabama,128117.4
+2003,Alabama,133969.3
+2004,Alabama,146886.7
+2005,Alabama,156403.3
+2006,Alabama,164347.8
+2007,Alabama,170263.9
+2008,Alabama,172677.2
+2009,Alabama,169128.5
+2010,Alabama,175470.1
+2011,Alabama,181929.9
+2012,Alabama,186553.9
+2013,Alabama,192166.5
+2014,Alabama,195037.7
+2015,Alabama,200197.5
+2016,Alabama,204454.7
+2017,Alabama,210895.7
+2018,Alabama,221030.7
+2019,Alabama,228142.6
+2020,Alabama,224870.6
+1997,California ,1071327.2
+1998,California ,1147944.3
+1999,California ,1247734.4
+2000,California ,1366166.5
+2001,California ,1387551.8
+2002,California ,1439341.7
+2003,California ,1530559.8
+2004,California ,1632428.7
+2005,California ,1752648.9
+2006,California ,1874851.3
+2007,California ,1955320.9
+2008,California ,1990187.9
+2009,California ,1919271.1
+2010,California ,1973511.9
+2011,California ,2049336.8
+2012,California ,2144089.6
+2013,California ,2261510.6
+2014,California ,2399077.7
+2015,California ,2559643.2
+2016,California ,2671100.5
+2017,California ,2831038.4
+2018,California ,2975083
+2019,California ,3132800.6
+2020,California ,3091871.5
+1997,Pennsylvania ,356720.2
+1998,Pennsylvania ,373707.8
+1999,Pennsylvania ,390499
+2000,Pennsylvania ,408203.4
+2001,Pennsylvania ,424772.9
+2002,Pennsylvania ,436474.1
+2003,Pennsylvania ,454517
+2004,Pennsylvania ,480811.1
+2005,Pennsylvania ,504870.6
+2006,Pennsylvania ,525666.1
+2007,Pennsylvania ,559142.6
+2008,Pennsylvania ,581527.3
+2009,Pennsylvania ,576963.5
+2010,Pennsylvania ,599025.1
+2011,Pennsylvania ,618555.4
+2012,Pennsylvania ,640663.1
+2013,Pennsylvania ,663334.5
+2014,Pennsylvania ,691173.2
+2015,Pennsylvania ,711787.2
+2016,Pennsylvania ,726884.5
+2017,Pennsylvania ,745140.8
+2018,Pennsylvania ,778374.6
+2019,Pennsylvania ,808737.5
+2020,Pennsylvania ,780176.1
+1997,Arizona ,132290.9
+1998,Arizona ,143286.2
+1999,Arizona ,155282.6
+2000,Arizona ,164609.9
+2001,Arizona ,171480.5
+2002,Arizona ,179475.6
+2003,Arizona ,192764.8
+2004,Arizona ,205390.5
+2005,Arizona ,228232.6
+2006,Arizona ,248154.2
+2007,Arizona ,262245.3
+2008,Arizona ,259262.6
+2009,Arizona ,243764.6
+2010,Arizona ,248125.3
+2011,Arizona ,257881.1
+2012,Arizona ,268068.2
+2013,Arizona ,275007.5
+2014,Arizona ,284851.4
+2015,Arizona ,298615
+2016,Arizona ,313056.5
+2017,Arizona ,330146.6
+2018,Arizona ,350718.3
+2019,Arizona ,370119.1
+2020,Arizona ,372461
+1997,Ohio,343084.8
+1998,Ohio,361511.6
+1999,Ohio,375814.4
+2000,Ohio,391320.8
+2001,Ohio,395710
+2002,Ohio,411148.4
+2003,Ohio,424426.6
+2004,Ohio,445410.3
+2005,Ohio,465892.9
+2006,Ohio,477200.7
+2007,Ohio,490823.7
+2008,Ohio,491609.1
+2009,Ohio,478023.5
+2010,Ohio,496457.7
+2011,Ohio,523355
+2012,Ohio,540882.4
+2013,Ohio,560936.8
+2014,Ohio,592876.2
+2015,Ohio,609321.7
+2016,Ohio,621542.6
+2017,Ohio,642351.4
+2018,Ohio,675029.7
+2019,Ohio,695361.6
+2020,Ohio,675037.3
+1997,Illinois ,415771.9
+1998,Illinois ,436648.6
+1999,Illinois ,460242.3
+2000,Illinois ,486766.2
+2001,Illinois ,501155.5
+2002,Illinois ,513611.5
+2003,Illinois ,530142.9
+2004,Illinois ,561037
+2005,Illinois ,589149.4
+2006,Illinois ,623471.2
+2007,Illinois ,648243.6
+2008,Illinois ,648732
+2009,Illinois ,645146.7
+2010,Illinois ,661714.8
+2011,Illinois ,687951
+2012,Illinois ,720881.5
+2013,Illinois ,734808.5
+2014,Illinois ,766120.8
+2015,Illinois ,795326.1
+2016,Illinois ,803943.7
+2017,Illinois ,823776.2
+2018,Illinois ,863039.5
+2019,Illinois ,885583
+2020,Illinois ,863516.7
+1997,Georgia ,242681.6
+1998,Georgia ,265321.7
+1999,Georgia ,289446.6
+2000,Georgia ,306019.9
+2001,Georgia ,317271.2
+2002,Georgia ,326670.1
+2003,Georgia ,340627
+2004,Georgia ,364229
+2005,Georgia ,386999.9
+2006,Georgia ,402501.1
+2007,Georgia ,414779.6
+2008,Georgia ,411851.7
+2009,Georgia ,406066.3
+2010,Georgia ,414664
+2011,Georgia ,427826.9
+2012,Georgia ,443566.1
+2013,Georgia ,459578.7
+2014,Georgia ,485282.5
+2015,Georgia ,515753
+2016,Georgia ,541292.2
+2017,Georgia ,568398.9
+2018,Georgia ,602023.9
+2019,Georgia ,625713.6
+2020,Georgia ,619240
+1997,Connecticut ,138548.4
+1998,Connecticut ,145432.7
+1999,Connecticut ,152353.9
+2000,Connecticut ,165822.4
+2001,Connecticut ,172834.5
+2002,Connecticut ,176191.6
+2003,Connecticut ,181230.3
+2004,Connecticut ,198282.4
+2005,Connecticut ,208660.9
+2006,Connecticut ,222914.3
+2007,Connecticut ,237397.6
+2008,Connecticut ,240576.2
+2009,Connecticut ,236921.6
+2010,Connecticut ,238051.6
+2011,Connecticut ,236816.3
+2012,Connecticut ,244114.4
+2013,Connecticut ,244127.5
+2014,Connecticut ,248778.9
+2015,Connecticut ,262372.7
+2016,Connecticut ,266747.3
+2017,Connecticut ,272569.9
+2018,Connecticut ,279782.3
+2019,Connecticut ,287822.2
+2020,Connecticut ,280900.3
+1997,Massachusetts ,237050.7
+1998,Massachusetts ,249235.5
+1999,Massachusetts ,265143.2
+2000,Massachusetts ,289653.4
+2001,Massachusetts ,297918.4
+2002,Massachusetts ,303990.3
+2003,Massachusetts ,315958.1
+2004,Massachusetts ,330936.7
+2005,Massachusetts ,346084.7
+2006,Massachusetts ,361657.3
+2007,Massachusetts ,380288.4
+2008,Massachusetts ,388099.9
+2009,Massachusetts ,391272.9
+2010,Massachusetts ,410187.5
+2011,Massachusetts ,426013.2
+2012,Massachusetts ,444478.2
+2013,Massachusetts ,455653.3
+2014,Massachusetts ,473052
+2015,Massachusetts ,503178.5
+2016,Massachusetts ,519143.5
+2017,Massachusetts ,539973.4
+2018,Massachusetts ,570464.2
+2019,Massachusetts ,596593.1
+2020,Massachusetts ,584039
+1997,Alaska ,25800
+1998,Alaska ,24227.6
+1999,Alaska ,24779.3
+2000,Alaska ,26815.8
+2001,Alaska ,28455.4
+2002,Alaska ,29633.4
+2003,Alaska ,31789.7
+2004,Alaska ,34987.9
+2005,Alaska ,39788.7
+2006,Alaska ,44457.1
+2007,Alaska ,49002.6
+2008,Alaska ,54759
+2009,Alaska ,49651.6
+2010,Alaska ,52947.7
+2011,Alaska ,56333.9
+2012,Alaska ,57717.5
+2013,Alaska ,56625.3
+2014,Alaska ,55750.6
+2015,Alaska ,50728.1
+2016,Alaska ,49755.6
+2017,Alaska ,51737
+2018,Alaska ,54292.9
+2019,Alaska ,54385.6
+2020,Alaska ,50246.7
+1997,Louisiana ,116426.3
+1998,Louisiana ,120338.4
+1999,Louisiana ,125894.7
+2000,Louisiana ,132709.5
+2001,Louisiana ,137847.7
+2002,Louisiana ,139566.7
+2003,Louisiana ,154449.3
+2004,Louisiana ,169836.2
+2005,Louisiana ,197783.5
+2006,Louisiana ,205888
+2007,Louisiana ,206602.3
+2008,Louisiana ,215289
+2009,Louisiana ,207119.8
+2010,Louisiana ,226161.8
+2011,Louisiana ,229215.1
+2012,Louisiana ,233481.2
+2013,Louisiana ,228688.3
+2014,Louisiana ,237717.1
+2015,Louisiana ,231751.8
+2016,Louisiana ,223409.5
+2017,Louisiana ,235712.2
+2018,Louisiana ,253236.1
+2019,Louisiana ,256918.5
+2020,Louisiana ,241990.8
+1997,New Jersey,307689
+1998,New Jersey,319679.8
+1999,New Jersey,336470.9
+2000,New Jersey,361845.3
+2001,New Jersey,373600
+2002,New Jersey,388278.1
+2003,New Jersey,404967.3
+2004,New Jersey,422633.4
+2005,New Jersey,440493.8
+2006,New Jersey,464317.7
+2007,New Jersey,480445
+2008,New Jersey,494855.4
+2009,New Jersey,486209.5
+2010,New Jersey,494977.8
+2011,New Jersey,498959.3
+2012,New Jersey,519569
+2013,New Jersey,537346.4
+2014,New Jersey,545465.3
+2015,New Jersey,569116.5
+2016,New Jersey,581504.4
+2017,New Jersey,590696.6
+2018,New Jersey,612979.3
+2019,New Jersey,634783.6
+2020,New Jersey,619061.1
+1997,Missouri ,163003.6
+1998,Missouri ,169505.2
+1999,Missouri ,177747.5
+2000,Missouri ,186785.2
+2001,Missouri ,190570.8
+2002,Missouri ,196764.8
+2003,Missouri ,205194.2
+2004,Missouri ,215413.2
+2005,Missouri ,225089
+2006,Missouri ,232906.3
+2007,Missouri ,240391.9
+2008,Missouri ,251691.6
+2009,Missouri ,251402.6
+2010,Missouri ,257897.4
+2011,Missouri ,259645
+2012,Missouri ,268861.9
+2013,Missouri ,277394.2
+2014,Missouri ,284237.2
+2015,Missouri ,293938.3
+2016,Missouri ,297752.6
+2017,Missouri ,305471.4
+2018,Missouri ,317949.1
+2019,Missouri ,328400.6
+2020,Missouri ,321708.8
+1997,Tennessee ,154366.8
+1998,Tennessee ,167439.9
+1999,Tennessee ,176083.2
+2000,Tennessee ,182089.1
+2001,Tennessee ,185855
+2002,Tennessee ,195331.6
+2003,Tennessee ,203328.4
+2004,Tennessee ,217939.2
+2005,Tennessee ,228126.3
+2006,Tennessee ,240111.1
+2007,Tennessee ,244194.2
+2008,Tennessee ,251549.8
+2009,Tennessee ,250379.4
+2010,Tennessee ,255696.1
+2011,Tennessee ,267487.6
+2012,Tennessee ,283482
+2013,Tennessee ,293265.3
+2014,Tennessee ,303788.8
+2015,Tennessee ,323658.5
+2016,Tennessee ,334435.7
+2017,Tennessee ,346283
+2018,Tennessee ,362737.1
+2019,Tennessee ,376582.4
+2020,Tennessee ,364485.9
+1997,Hawaii,37700.7
+1998,Hawaii,37621.7
+1999,Hawaii,39246.9
+2000,Hawaii,41519.9
+2001,Hawaii,42982.8
+2002,Hawaii,45449.9
+2003,Hawaii,48922.8
+2004,Hawaii,53761.1
+2005,Hawaii,58658.7
+2006,Hawaii,62349.9
+2007,Hawaii,65223.8
+2008,Hawaii,66857.7
+2009,Hawaii,65711.3
+2010,Hawaii,68260.2
+2011,Hawaii,70630.1
+2012,Hawaii,73676.7
+2013,Hawaii,75807.8
+2014,Hawaii,77819.3
+2015,Hawaii,82644
+2016,Hawaii,85899.9
+2017,Hawaii,89618.6
+2018,Hawaii,93100.5
+2019,Hawaii,95744.3
+2020,Hawaii,89856.2
+1997,Minnesota ,156282.5
+1998,Minnesota ,166873.8
+1999,Minnesota ,175155.9
+2000,Minnesota ,190894.1
+2001,Minnesota ,195282.3
+2002,Minnesota ,202853.9
+2003,Minnesota ,214847.2
+2004,Minnesota ,230245.2
+2005,Minnesota ,243069.9
+2006,Minnesota ,250156.6
+2007,Minnesota ,259296.2
+2008,Minnesota ,264866.4
+2009,Minnesota ,260513.1
+2010,Minnesota ,272636
+2011,Minnesota ,285408.1
+2012,Minnesota ,296272.5
+2013,Minnesota ,308784.5
+2014,Minnesota ,322690.2
+2015,Minnesota ,333065.8
+2016,Minnesota ,341696.3
+2017,Minnesota ,353416.4
+2018,Minnesota ,371929.7
+2019,Minnesota ,383777
+2020,Minnesota ,374351.8
+1997,Kentucky ,104538.2
+1998,Kentucky ,109396.4
+1999,Kentucky ,114994.2
+2000,Kentucky ,114099.1
+2001,Kentucky ,117335.8
+2002,Kentucky ,122215.8
+2003,Kentucky ,127174.2
+2004,Kentucky ,134190.8
+2005,Kentucky ,142708
+2006,Kentucky ,151185.8
+2007,Kentucky ,154542.4
+2008,Kentucky ,158209.2
+2009,Kentucky ,156038.5
+2010,Kentucky ,164820.3
+2011,Kentucky ,170004.7
+2012,Kentucky ,176323.1
+2013,Kentucky ,182470.7
+2014,Kentucky ,186419
+2015,Kentucky ,192819.3
+2016,Kentucky ,195840.2
+2017,Kentucky ,200345.5
+2018,Kentucky ,207849.4
+2019,Kentucky ,215398.9
+2020,Kentucky ,210024.2
+1997,South Carolina,97423.1
+1998,South Carolina,103467
+1999,South Carolina,110095.7
+2000,South Carolina,115176.6
+2001,South Carolina,119290
+2002,South Carolina,124178
+2003,South Carolina,130313.7
+2004,South Carolina,135143.4
+2005,South Carolina,142615.1
+2006,South Carolina,150661.4
+2007,South Carolina,159101.4
+2008,South Carolina,161797.9
+2009,South Carolina,159911.4
+2010,South Carolina,163844
+2011,South Carolina,170077.9
+2012,South Carolina,175328.5
+2013,South Carolina,182837
+2014,South Carolina,191981.5
+2015,South Carolina,204000.4
+2016,South Carolina,213584.6
+2017,South Carolina,223414
+2018,South Carolina,235286.9
+2019,South Carolina,247543.8
+2020,South Carolina,241688.7
+1997,West Virginia,38808.2
+1998,West Virginia,40053.8
+1999,West Virginia,41796.4
+2000,West Virginia,42577.4
+2001,West Virginia,43982.8
+2002,West Virginia,45433.6
+2003,West Virginia,46747.5
+2004,West Virginia,49280.5
+2005,West Virginia,53292.7
+2006,West Virginia,56578
+2007,West Virginia,58628.8
+2008,West Virginia,61994.1
+2009,West Virginia,63032.5
+2010,West Virginia,65304.7
+2011,West Virginia,68446.8
+2012,West Virginia,69335.6
+2013,West Virginia,70998.6
+2014,West Virginia,71769.1
+2015,West Virginia,70815.9
+2016,West Virginia,70006.2
+2017,West Virginia,72853.1
+2018,West Virginia,77632.5
+2019,West Virginia,78863.9
+2020,West Virginia,73709.2
+1997,Indiana ,170481.1
+1998,Indiana ,184395
+1999,Indiana ,192765.5
+2000,Indiana ,203356.8
+2001,Indiana ,204705.6
+2002,Indiana ,212438.6
+2003,Indiana ,223500.2
+2004,Indiana ,236921.3
+2005,Indiana ,243862.2
+2006,Indiana ,255462.9
+2007,Indiana ,269071.3
+2008,Indiana ,273140.1
+2009,Indiana ,261500.2
+2010,Indiana ,280497
+2011,Indiana ,288942.9
+2012,Indiana ,297816.1
+2013,Indiana ,308725.4
+2014,Indiana ,325008.3
+2015,Indiana ,329527.7
+2016,Indiana ,337217.2
+2017,Indiana ,350436.3
+2018,Indiana ,368424.5
+2019,Indiana ,379684.1
+2020,Indiana ,372636.7
+1997,Wisconsin ,153424.9
+1998,Wisconsin ,162616.5
+1999,Wisconsin ,172328.7
+2000,Wisconsin ,180616.3
+2001,Wisconsin ,187974
+2002,Wisconsin ,194844.9
+2003,Wisconsin ,203048.5
+2004,Wisconsin ,215016.8
+2005,Wisconsin ,225590.7
+2006,Wisconsin ,235848
+2007,Wisconsin ,243841.3
+2008,Wisconsin ,244634.3
+2009,Wisconsin ,245518.6
+2010,Wisconsin ,254615.2
+2011,Wisconsin ,264166.4
+2012,Wisconsin ,274540.5
+2013,Wisconsin ,281832.6
+2014,Wisconsin ,293836.7
+2015,Wisconsin ,306498.9
+2016,Wisconsin ,313440.2
+2017,Wisconsin ,320610
+2018,Wisconsin ,337553.1
+2019,Wisconsin ,349416.5
+2020,Wisconsin ,338678.4
+1997,Wyoming ,14708.7
+1998,Wyoming ,14883.8
+1999,Wyoming ,15715
+2000,Wyoming ,17191.8
+2001,Wyoming ,18691.2
+2002,Wyoming ,19149.7
+2003,Wyoming ,21057.8
+2004,Wyoming ,23220.1
+2005,Wyoming ,27219.2
+2006,Wyoming ,32455.9
+2007,Wyoming ,36613.5
+2008,Wyoming ,42550.2
+2009,Wyoming ,36085.6
+2010,Wyoming ,37442.6
+2011,Wyoming ,39415.2
+2012,Wyoming ,38437.7
+2013,Wyoming ,38943
+2014,Wyoming ,39431.7
+2015,Wyoming ,37860.7
+2016,Wyoming ,35704
+2017,Wyoming ,37271.2
+2018,Wyoming ,39703.2
+2019,Wyoming ,40420.1
+2020,Wyoming ,36241.5
+1997,Iowa ,82731.1
+1998,Iowa ,84676.6
+1999,Iowa ,87796
+2000,Iowa ,93189.8
+2001,Iowa ,94973.4
+2002,Iowa ,99123.2
+2003,Iowa ,105020.4
+2004,Iowa ,116834.4
+2005,Iowa ,122256.2
+2006,Iowa ,127052.6
+2007,Iowa ,137179.9
+2008,Iowa ,137116.2
+2009,Iowa ,136819.9
+2010,Iowa ,142016.7
+2011,Iowa ,148102.2
+2012,Iowa ,157838.6
+2013,Iowa ,161583
+2014,Iowa ,172121.9
+2015,Iowa ,179459.2
+2016,Iowa ,179939.8
+2017,Iowa ,182151.3
+2018,Iowa ,190147
+2019,Iowa ,194658.1
+2020,Iowa ,192710.2
+1997,New Mexico,52502.5
+1998,New Mexico,50674.9
+1999,New Mexico,53082.3
+2000,New Mexico,55239.7
+2001,New Mexico,55970.3
+2002,New Mexico,58033.8
+2003,New Mexico,62865.4
+2004,New Mexico,69696.5
+2005,New Mexico,73662.3
+2006,New Mexico,77396.5
+2007,New Mexico,80543.4
+2008,New Mexico,83691.3
+2009,New Mexico,81990.3
+2010,New Mexico,84037.9
+2011,New Mexico,86683.3
+2012,New Mexico,87644.8
+2013,New Mexico,88533
+2014,New Mexico,92586.3
+2015,New Mexico,91322
+2016,New Mexico,91240.2
+2017,New Mexico,94456.7
+2018,New Mexico,100079.9
+2019,New Mexico,105143.4
+2020,New Mexico,100310.1
+1997,Idaho ,29523.9
+1998,Idaho ,31099
+1999,Idaho ,34252.3
+2000,Idaho ,38130.6
+2001,Idaho ,37493.8
+2002,Idaho ,38820
+2003,Idaho ,40417.7
+2004,Idaho ,43865.9
+2005,Idaho ,47958.1
+2006,Idaho ,50985.5
+2007,Idaho ,53864.9
+2008,Idaho ,55584.4
+2009,Idaho ,53763.9
+2010,Idaho ,55215.3
+2011,Idaho ,56516.4
+2012,Idaho ,57780.1
+2013,Idaho ,61155.2
+2014,Idaho ,63799.4
+2015,Idaho ,66082
+2016,Idaho ,69075.5
+2017,Idaho ,73286.5
+2018,Idaho ,79090.8
+2019,Idaho ,83665.5
+2020,Idaho ,84032.2
+1997,Mississippi ,58383.4
+1998,Mississippi ,60962.4
+1999,Mississippi ,63818.9
+2000,Mississippi ,65600.1
+2001,Mississippi ,67136.5
+2002,Mississippi ,69042.5
+2003,Mississippi ,73587.2
+2004,Mississippi ,77297.6
+2005,Mississippi ,81224.5
+2006,Mississippi ,86064.5
+2007,Mississippi ,91219.5
+2008,Mississippi ,96921.1
+2009,Mississippi ,93502.9
+2010,Mississippi ,95265.4
+2011,Mississippi ,96408.1
+2012,Mississippi ,99616.3
+2013,Mississippi ,101474.2
+2014,Mississippi ,103519.8
+2015,Mississippi ,105427.9
+2016,Mississippi ,106492.9
+2017,Mississippi ,109431.1
+2018,Mississippi ,113578.5
+2019,Mississippi ,115971.3
+2020,Mississippi ,114200.6
+1997,Kansas ,74669.9
+1998,Kansas ,78384.9
+1999,Kansas ,81669.8
+2000,Kansas ,85820.7
+2001,Kansas ,88594.7
+2002,Kansas ,91049.7
+2003,Kansas ,94630.2
+2004,Kansas ,98013.9
+2005,Kansas ,103966.3
+2006,Kansas ,112634
+2007,Kansas ,122349.1
+2008,Kansas ,127824.5
+2009,Kansas ,124779.5
+2010,Kansas ,127970.4
+2011,Kansas ,135528.5
+2012,Kansas ,140764.1
+2013,Kansas ,143065.8
+2014,Kansas ,148942.7
+2015,Kansas ,154015.6
+2016,Kansas ,159232.8
+2017,Kansas ,163968.3
+2018,Kansas ,171718.8
+2019,Kansas ,176493.1
+2020,Kansas ,173298.3
+1997,Oregon ,100927.9
+1998,Oregon ,105142.7
+1999,Oregon ,107564.3
+2000,Oregon ,117291.2
+2001,Oregon ,117295.4
+2002,Oregon ,121200.6
+2003,Oregon ,127153.5
+2004,Oregon ,136304.4
+2005,Oregon ,143592
+2006,Oregon ,155166.1
+2007,Oregon ,161431.6
+2008,Oregon ,165050.8
+2009,Oregon ,160574.9
+2010,Oregon ,163827
+2011,Oregon ,170620.6
+2012,Oregon ,174427.6
+2013,Oregon ,179389.5
+2014,Oregon ,188777.5
+2015,Oregon ,202718.6
+2016,Oregon ,214617.5
+2017,Oregon ,227042.2
+2018,Oregon ,241978.1
+2019,Oregon ,253623.2
+2020,Oregon ,250458.5
+1997,Arkansas ,59826.9
+1998,Arkansas ,62397.8
+1999,Arkansas ,66791.2
+2000,Arkansas ,68740.4
+2001,Arkansas ,70680.3
+2002,Arkansas ,73986.5
+2003,Arkansas ,78306.3
+2004,Arkansas ,84557
+2005,Arkansas ,89643.1
+2006,Arkansas ,94451.6
+2007,Arkansas ,96991.9
+2008,Arkansas ,99014.4
+2009,Arkansas ,96983.7
+2010,Arkansas ,100970.8
+2011,Arkansas ,105107.8
+2012,Arkansas ,107718.8
+2013,Arkansas ,112764.6
+2014,Arkansas ,116151.8
+2015,Arkansas ,117734.3
+2016,Arkansas ,119191.8
+2017,Arkansas ,122978.5
+2018,Arkansas ,127761.3
+2019,Arkansas ,130954.1
+2020,Arkansas ,129073.9
+1997,Oklahoma ,79044.3
+1998,Oklahoma ,81208
+1999,Oklahoma ,84089.8
+2000,Oklahoma ,90893
+2001,Oklahoma ,96759.9
+2002,Oklahoma ,99151
+2003,Oklahoma ,105130
+2004,Oklahoma ,112872.2
+2005,Oklahoma ,124370.4
+2006,Oklahoma ,136949.6
+2007,Oklahoma ,144799.5
+2008,Oklahoma ,159761.3
+2009,Oklahoma ,145858.2
+2010,Oklahoma ,153215.1
+2011,Oklahoma ,165091.4
+2012,Oklahoma ,173238.8
+2013,Oklahoma ,181858.2
+2014,Oklahoma ,193546.4
+2015,Oklahoma ,184140.4
+2016,Oklahoma ,177813
+2017,Oklahoma ,185485.6
+2018,Oklahoma ,198595.8
+2019,Oklahoma ,202036.1
+2020,Oklahoma ,186581.4
+1997,Virginia,215126
+1998,Virginia,231505.4
+1999,Virginia,249106.3
+2000,Virginia,267618
+2001,Virginia,284396.6
+2002,Virginia,293399.4
+2003,Virginia,310132.7
+2004,Virginia,332668.5
+2005,Virginia,360842.3
+2006,Virginia,378981.2
+2007,Virginia,392929
+2008,Virginia,400305.5
+2009,Virginia,409441.9
+2010,Virginia,423563.9
+2011,Virginia,433009.6
+2012,Virginia,445120.7
+2013,Virginia,455166.9
+2014,Virginia,464514.4
+2015,Virginia,484530.8
+2016,Virginia,496570.2
+2017,Virginia,511876.3
+2018,Virginia,533510.4
+2019,Virginia,556905.2
+2020,Virginia,551760.3
+1997,Utah ,57686.4
+1998,Utah ,62288.5
+1999,Utah ,66038.5
+2000,Utah ,70383.8
+2001,Utah ,73392
+2002,Utah ,76159.1
+2003,Utah ,79138
+2004,Utah ,85783.4
+2005,Utah ,94303
+2006,Utah ,106028.3
+2007,Utah ,114657.1
+2008,Utah ,115885
+2009,Utah ,113517.8
+2010,Utah ,118098.3
+2011,Utah ,124689.9
+2012,Utah ,128764.2
+2013,Utah ,134529.5
+2014,Utah ,141528
+2015,Utah ,148917.8
+2016,Utah ,157442.7
+2017,Utah ,167613.4
+2018,Utah ,181622.7
+2019,Utah ,192519.2
+2020,Utah ,194985.8
+1997,Nevada ,60221.3
+1998,Nevada ,65105.4
+1999,Nevada ,71444.7
+2000,Nevada ,76654.2
+2001,Nevada ,80380.2
+2002,Nevada ,84786
+2003,Nevada ,90367.5
+2004,Nevada ,103445.9
+2005,Nevada ,117056.1
+2006,Nevada ,127008.3
+2007,Nevada ,131492.6
+2008,Nevada ,129095.5
+2009,Nevada ,120987.7
+2010,Nevada ,123652.3
+2011,Nevada ,126675.6
+2012,Nevada ,127789.1
+2013,Nevada ,130686.6
+2014,Nevada ,134518.4
+2015,Nevada ,143554
+2016,Nevada ,150287.3
+2017,Nevada ,158502.8
+2018,Nevada ,169179.6
+2019,Nevada ,178199.4
+2020,Nevada ,172597.6
+1997,Maryland ,159331.2
+1998,Maryland ,169965.4
+1999,Maryland ,180191.2
+2000,Maryland ,192019.8
+2001,Maryland ,205567.2
+2002,Maryland ,218326.8
+2003,Maryland ,228734.3
+2004,Maryland ,246682
+2005,Maryland ,266065.2
+2006,Maryland ,279423.6
+2007,Maryland ,287759.7
+2008,Maryland ,296325.5
+2009,Maryland ,302388.8
+2010,Maryland ,316316.9
+2011,Maryland ,327726.7
+2012,Maryland ,334555.5
+2013,Maryland ,340706.2
+2014,Maryland ,353248.7
+2015,Maryland ,370768.3
+2016,Maryland ,387620.2
+2017,Maryland ,399737.6
+2018,Maryland ,411619.1
+2019,Maryland ,426747.4
+2020,Maryland ,422726.4
+1997,Maine ,30623.5
+1998,Maine ,32159.3
+1999,Maine ,34379.1
+2000,Maine ,36840.9
+2001,Maine ,38499.2
+2002,Maine ,40185.5
+2003,Maine ,41842.2
+2004,Maine ,44525.7
+2005,Maine ,45869.8
+2006,Maine ,47929.5
+2007,Maine ,49163.3
+2008,Maine ,49978.5
+2009,Maine ,50567.9
+2010,Maine ,51724.3
+2011,Maine ,51867.1
+2012,Maine ,52866.6
+2013,Maine ,53670.7
+2014,Maine ,55826.7
+2015,Maine ,57559.8
+2016,Maine ,59754.2
+2017,Maine ,61671.5
+2018,Maine ,64557
+2019,Maine ,67717.1
+2020,Maine ,66196
+1997,Rhode Island,28922.8
+1998,Rhode Island,30821.2
+1999,Rhode Island,32284
+2000,Rhode Island,34520.9
+2001,Rhode Island,35981.9
+2002,Rhode Island,38110.6
+2003,Rhode Island,40249.7
+2004,Rhode Island,43218.3
+2005,Rhode Island,45133.1
+2006,Rhode Island,47684.8
+2007,Rhode Island,47759.9
+2008,Rhode Island,47078.4
+2009,Rhode Island,47906.6
+2010,Rhode Island,49472.4
+2011,Rhode Island,50169.8
+2012,Rhode Island,51607.4
+2013,Rhode Island,52797.5
+2014,Rhode Island,54297.7
+2015,Rhode Island,56560.7
+2016,Rhode Island,57529.4
+2017,Rhode Island,58117.2
+2018,Rhode Island,59924.6
+2019,Rhode Island,61883.8
+2020,Rhode Island,60224.7
+1997,Nebraska ,49945.6
+1998,Nebraska ,51917.2
+1999,Nebraska ,53704.7
+2000,Nebraska ,56541.1
+2001,Nebraska ,59598.4
+2002,Nebraska ,61622.3
+2003,Nebraska ,66402.1
+2004,Nebraska ,70320.2
+2005,Nebraska ,74120
+2006,Nebraska ,78283.1
+2007,Nebraska ,83299.6
+2008,Nebraska ,85661.3
+2009,Nebraska ,87107.4
+2010,Nebraska ,91785.5
+2011,Nebraska ,99954.2
+2012,Nebraska ,102605.3
+2013,Nebraska ,106516.8
+2014,Nebraska ,111386.8
+2015,Nebraska ,115663.9
+2016,Nebraska ,116879.2
+2017,Nebraska ,120949.7
+2018,Nebraska ,124705.4
+2019,Nebraska ,130011.8
+2020,Nebraska ,128808.7
+1997,Vermont ,15451.6
+1998,Vermont ,16080.3
+1999,Vermont ,17161.8
+2000,Vermont ,18312.7
+2001,Vermont ,19271.8
+2002,Vermont ,20161.5
+2003,Vermont ,21124
+2004,Vermont ,22657.8
+2005,Vermont ,23500.9
+2006,Vermont ,24304.7
+2007,Vermont ,24689.3
+2008,Vermont ,25667.8
+2009,Vermont ,25870.7
+2010,Vermont ,27113.3
+2011,Vermont ,28134.6
+2012,Vermont ,28893.6
+2013,Vermont ,28966
+2014,Vermont ,29690.7
+2015,Vermont ,30663.7
+2016,Vermont ,31430.4
+2017,Vermont ,32040.7
+2018,Vermont ,32981
+2019,Vermont ,34013.4
+2020,Vermont ,32796.7
+1997,Montana ,19323.1
+1998,Montana ,20450
+1999,Montana ,20821
+2000,Montana ,21878.4
+2001,Montana ,22793.3
+2002,Montana ,23868
+2003,Montana ,25647.4
+2004,Montana ,27894.9
+2005,Montana ,30528
+2006,Montana ,32967
+2007,Montana ,36090.7
+2008,Montana ,36814.5
+2009,Montana ,36031.8
+2010,Montana ,38103.2
+2011,Montana ,40616.4
+2012,Montana ,42041.6
+2013,Montana ,43136.8
+2014,Montana ,44608.4
+2015,Montana ,46269.3
+2016,Montana ,45680.3
+2017,Montana ,47946.9
+2018,Montana ,50692.3
+2019,Montana ,52934.6
+2020,Montana ,51488.7
+1997,North Dakota,15767.7
+1998,North Dakota,16826.2
+1999,North Dakota,17017.3
+2000,North Dakota,18013.5
+2001,North Dakota,18960.6
+2002,North Dakota,20229.1
+2003,North Dakota,22072.5
+2004,North Dakota,23151.9
+2005,North Dakota,24461.1
+2006,North Dakota,26209
+2007,North Dakota,28781.7
+2008,North Dakota,31852.1
+2009,North Dakota,32239.7
+2010,North Dakota,35689.4
+2011,North Dakota,41437.5
+2012,North Dakota,51624.6
+2013,North Dakota,53733.4
+2014,North Dakota,58679.9
+2015,North Dakota,55069.1
+2016,North Dakota,50792.3
+2017,North Dakota,52607.1
+2018,North Dakota,56286.8
+2019,North Dakota,57180.9
+2020,North Dakota,54032.9
+1997,Delaware ,33400
+1998,Delaware ,37065.1
+1999,Delaware ,40427.3
+2000,Delaware ,43515.9
+2001,Delaware ,46555.9
+2002,Delaware ,45828.2
+2003,Delaware ,47731.3
+2004,Delaware ,51337.7
+2005,Delaware ,52028.2
+2006,Delaware ,54956.7
+2007,Delaware ,56281.3
+2008,Delaware ,54777.6
+2009,Delaware ,57267.3
+2010,Delaware ,57986.7
+2011,Delaware ,60821.8
+2012,Delaware ,61866.7
+2013,Delaware ,61007.5
+2014,Delaware ,67549.8
+2015,Delaware ,71547.8
+2016,Delaware ,69284.2
+2017,Delaware ,69899.4
+2018,Delaware ,74186.7
+2019,Delaware ,77082.4
+2020,Delaware ,75512.5
+1997,New Hampshire,38211.6
+1998,New Hampshire,40566.7
+1999,New Hampshire,41873.3
+2000,New Hampshire,45222.8
+2001,New Hampshire,46625.8
+2002,New Hampshire,48691.9
+2003,New Hampshire,51378.2
+2004,New Hampshire,54125.9
+2005,New Hampshire,56346.8
+2006,New Hampshire,59395.5
+2007,New Hampshire,60711.2
+2008,New Hampshire,60865.3
+2009,New Hampshire,61908.9
+2010,New Hampshire,64170.7
+2011,New Hampshire,65449.6
+2012,New Hampshire,67635.7
+2013,New Hampshire,69495.5
+2014,New Hampshire,72304.4
+2015,New Hampshire,75832
+2016,New Hampshire,78509
+2017,New Hampshire,80838.4
+2018,New Hampshire,84584.1
+2019,New Hampshire,87634.1
+2020,New Hampshire,85109.3
+1997,South Dakota,19036.2
+1998,South Dakota,20216.8
+1999,South Dakota,21045.5
+2000,South Dakota,22669.2
+2001,South Dakota,23406.1
+2002,South Dakota,26164.5
+2003,South Dakota,27196.8
+2004,South Dakota,29030.5
+2005,South Dakota,30535
+2006,South Dakota,31824.1
+2007,South Dakota,34816
+2008,South Dakota,36475.6
+2009,South Dakota,36341.5
+2010,South Dakota,37709.2
+2011,South Dakota,41690.2
+2012,South Dakota,43550.7
+2013,South Dakota,44956.5
+2014,South Dakota,46369.9
+2015,South Dakota,47630.5
+2016,South Dakota,48731.3
+2017,South Dakota,50342.9
+2018,South Dakota,53239
+2019,South Dakota,54940.9
+2020,South Dakota,54852.1
