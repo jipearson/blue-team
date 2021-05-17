@@ -15,10 +15,16 @@
 ![Slide_2](https://github.com/jipearson/blue-team/blob/presentation/images/Slide_2.jpg)
 
 ### Slide 3
-![Slide_3](https://github.com/jipearson/blue-team/blob/presentation/images/Slide_3.jpg)
+![Slide_3](https://github.com/jipearson/blue-team/blob/presentation/images/Slide_3.png)
 
 ### Slide 4
 ![Slide_4](https://github.com/jipearson/blue-team/blob/presentation/images/Slide_4.jpg)
+
+### Slide 5
+![Slide_5](https://github.com/jipearson/blue-team/blob/presentation/images/Slide_5.png)
+
+### Slide 6
+![Slide_6](https://github.com/jipearson/blue-team/blob/presentation/images/Slide_6.png)
 
 
 
