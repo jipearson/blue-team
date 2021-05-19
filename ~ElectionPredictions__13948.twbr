@@ -1,0 +1,1945 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20211.21.0420.1112                               -->
+<workbook source-build='2021.1.1 (20211.21.0420.1112)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AutoCreateAndUpdateDSDPhoneLayouts />
+    <CustomReferenceLineTooltips />
+    <MapboxVectorStylesAndLayers />
+    <_.fcp.MarkAnimation.true...MarkAnimation />
+    <_.fcp.ObjectModelEncapsulateLegacy.true...ObjectModelEncapsulateLegacy />
+    <_.fcp.ObjectModelTableType.true...ObjectModelTableType />
+    <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel />
+    <_.fcp.SetMembershipControl.true...SetMembershipControl />
+    <SheetIdentifierTracking />
+    <SortTagCleanup />
+    <WindowsPersistSimpleIdentifiers />
+    <ZoneBackgroundTransparency />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource hasconnection='false' inline='true' name='Parameters' version='18.1'>
+      <aliases enabled='yes' />
+      <column caption='Select Worksheet' datatype='string' name='[Parameter 1]' param-domain-type='list' role='measure' type='nominal' value='&quot;2020 Predictions&quot;'>
+        <calculation class='tableau' formula='&quot;2020 Predictions&quot;' />
+        <members>
+          <member value='&quot;2020 Predictions&quot;' />
+          <member value='&quot;2024 Predictions&quot;' />
+        </members>
+      </column>
+      <column caption='Select Worksheet (copy)' datatype='string' name='[Select Worksheet (copy)_981503287481389063]' param-domain-type='list' role='measure' type='nominal' value='&quot;2024 Predictions&quot;'>
+        <calculation class='tableau' formula='&quot;2024 Predictions&quot;' />
+        <members>
+          <member value='&quot;2020 Predictions&quot;' />
+          <member value='&quot;2024 Predictions&quot;' />
+        </members>
+      </column>
+    </datasource>
+    <datasource caption='2024_predictions' inline='true' name='federated.0wqtni31nyfki11dwyic81grhmkn' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='Presidential_Election_Predictions' name='textscan.072whiu1wkquow1fxs9ds1tu0x64'>
+            <connection class='textscan' directory='C:/Users/tyler/repos/bootcamp-homework/blue-team' filename='Electoral_votes.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='textscan.072whiu1wkquow1fxs9ds1tu0x64' name='2020_predictions.csv' table='[2020_predictions#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='string' name='STATE' ordinal='0' />
+            <column datatype='integer' name='Prediction' ordinal='1' />
+            <column datatype='integer' name='Actual' ordinal='2' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.false...relation>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation type='collection'>
+          <relation connection='textscan.072whiu1wkquow1fxs9ds1tu0x64' name='Electoral_votes.csv' table='[Electoral_votes#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+              <column datatype='string' name='STATE' ordinal='0' />
+              <column datatype='integer' name='Electoral Votes' ordinal='1' />
+            </columns>
+          </relation>
+          <relation connection='textscan.072whiu1wkquow1fxs9ds1tu0x64' name='2020_predictions.csv' table='[2020_predictions#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+              <column datatype='string' name='STATE' ordinal='0' />
+              <column datatype='integer' name='Prediction' ordinal='1' />
+              <column datatype='integer' name='Actual' ordinal='2' />
+            </columns>
+          </relation>
+          <relation connection='textscan.072whiu1wkquow1fxs9ds1tu0x64' name='2024_predictions.csv' table='[2024_predictions#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+              <column datatype='string' name='STATE' ordinal='0' />
+              <column datatype='integer' name='Prediction 2024' ordinal='1' />
+              <column datatype='integer' name='2020 Actual' ordinal='2' />
+            </columns>
+          </relation>
+        </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+        <cols>
+          <map key='[2020 Actual]' value='[2024_predictions.csv].[2020 Actual]' />
+          <map key='[Actual]' value='[2020_predictions.csv].[Actual]' />
+          <map key='[Electoral Votes]' value='[Electoral_votes.csv].[Electoral Votes]' />
+          <map key='[Prediction 2024]' value='[2024_predictions.csv].[Prediction 2024]' />
+          <map key='[Prediction]' value='[2020_predictions.csv].[Prediction]' />
+          <map key='[STATE (2020_predictions.csv)]' value='[2020_predictions.csv].[STATE]' />
+          <map key='[STATE (2024_predictions.csv)]' value='[2024_predictions.csv].[STATE]' />
+          <map key='[STATE]' value='[Electoral_votes.csv].[STATE]' />
+        </cols>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Electoral_votes.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[2020_predictions.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[2024_predictions.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>STATE</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[STATE]</local-name>
+            <parent-name>[Electoral_votes.csv]</parent-name>
+            <remote-alias>STATE</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Electoral_votes.csv_3A8D494DC776477399C120E22AFA9409]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Electoral Votes</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Electoral Votes]</local-name>
+            <parent-name>[Electoral_votes.csv]</parent-name>
+            <remote-alias>Electoral Votes</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Electoral_votes.csv_3A8D494DC776477399C120E22AFA9409]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>STATE</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[STATE (2020_predictions.csv)]</local-name>
+            <parent-name>[2020_predictions.csv]</parent-name>
+            <remote-alias>STATE</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[2020_predictions.csv_78A64299AE654D2C8678CC6A5B5290FF]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Prediction</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Prediction]</local-name>
+            <parent-name>[2020_predictions.csv]</parent-name>
+            <remote-alias>Prediction</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[2020_predictions.csv_78A64299AE654D2C8678CC6A5B5290FF]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Actual</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Actual]</local-name>
+            <parent-name>[2020_predictions.csv]</parent-name>
+            <remote-alias>Actual</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[2020_predictions.csv_78A64299AE654D2C8678CC6A5B5290FF]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>STATE</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[STATE (2024_predictions.csv)]</local-name>
+            <parent-name>[2024_predictions.csv]</parent-name>
+            <remote-alias>STATE</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[2024_predictions.csv_4EFD3596FC4D47DDAC56C9065884C046]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Prediction 2024</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Prediction 2024]</local-name>
+            <parent-name>[2024_predictions.csv]</parent-name>
+            <remote-alias>Prediction 2024</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[2024_predictions.csv_4EFD3596FC4D47DDAC56C9065884C046]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>2020 Actual</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[2020 Actual]</local-name>
+            <parent-name>[2024_predictions.csv]</parent-name>
+            <remote-alias>2020 Actual</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[2024_predictions.csv_4EFD3596FC4D47DDAC56C9065884C046]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='2024 Party' datatype='string' name='[Calculation_981503287474585600]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='IF ([Prediction 2024] = 1) THEN &quot;Republican&quot;&#13;&#10;ELSE &quot;Democrat&quot;&#13;&#10;END' />
+      </column>
+      <column caption='Prediction ' datatype='string' name='[Calculation_981503287474962433]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='IF (([2020 Actual] != [Prediction 2024]) OR ([Actual] != [Prediction])) THEN &quot;Predicted Incorrectly&quot;&#13;&#10;ELSE &quot;Predicted Correctly&quot;&#13;&#10;END' />
+      </column>
+      <column caption='Swap Worksheet' datatype='string' name='[Calculation_981503287479705605]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='[Parameters].[Parameter 1]' />
+      </column>
+      <column caption='2020 Party' datatype='string' name='[Calculation_981503287483379720]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='IF ([Prediction] = 1) THEN &quot;Republican&quot;&#13;&#10;ELSE &quot;Democrat&quot;&#13;&#10;END' />
+      </column>
+      <column caption='Election Results' datatype='string' name='[Calculation_981503287488409610]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='IF ([Actual] = 1) THEN &quot;Republican&quot;&#13;&#10;ELSE &quot;Democrat&quot;&#13;&#10;END' />
+      </column>
+      <column caption='Projected Change' datatype='string' name='[Calculation_981503287503241227]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='IF ([Prediction 2024] != [2020 Actual]) THEN &quot;Projected Change&quot;&#13;&#10;END' />
+      </column>
+      <column caption='Electoral Votes 2020_ Republican' datatype='integer' name='[Calculation_981503287512014860]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='{FIXED : SUM(IF [Calculation_981503287483379720] = &quot;Republican&quot; THEN [Electoral Votes] ELSE 0 END)}' />
+      </column>
+      <column caption='Hex_Column' datatype='integer' name='[Calculation_981503287542296590]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='CASE [STATE]&#13;&#10;&#13;&#10;WHEN &apos;Alabama&apos; THEN 15&#13;&#10;&#13;&#10;WHEN &apos;Alaska&apos; THEN 1&#13;&#10;&#13;&#10;WHEN &apos;Arizona&apos; THEN 6&#13;&#10;&#13;&#10;WHEN &apos;Arkansas&apos; THEN 12&#13;&#10;&#13;&#10;WHEN &apos;California&apos; THEN 4&#13;&#10;&#13;&#10;WHEN &apos;Colorado&apos; THEN 7&#13;&#10;&#13;&#10;WHEN &apos;Connecticut&apos; THEN 22&#13;&#10;&#13;&#10;WHEN &apos;Delaware&apos; THEN 21&#13;&#10;&#13;&#10;WHEN &apos;District of Columbia&apos; THEN 19&#13;&#10;&#13;&#10;WHEN &apos;Florida&apos; THEN 17&#13;&#10;&#13;&#10;WHEN &apos;Georgia&apos; THEN 16&#13;&#10;&#13;&#10;WHEN &apos;Hawaii&apos; THEN 1&#13;&#10;&#13;&#10;WHEN &apos;Idaho&apos; THEN 4&#13;&#10;&#13;&#10;WHEN &apos;Illinois&apos; THEN 12&#13;&#10;&#13;&#10;WHEN &apos;Indiana&apos; THEN 14&#13;&#10;&#13;&#10;WHEN &apos;Iowa&apos; THEN 10&#13;&#10;&#13;&#10;WHEN &apos;Kansas&apos; THEN 10&#13;&#10;&#13;&#10;WHEN &apos;Kentucky&apos; THEN 13&#13;&#10;&#13;&#10;WHEN &apos;Louisiana&apos; THEN 11&#13;&#10;&#13;&#10;WHEN &apos;Maine (Statewide)&apos; THEN 24&#13;&#10;&#13;&#10;WHEN &apos;Maine 1st Congressional District&apos; THEN 23&#13;&#10;&#13;&#10;WHEN &apos;Maine 2nd Congressional District&apos; THEN 25&#13;&#10;&#13;&#10;WHEN &apos;Maryland&apos; THEN 17&#13;&#10;&#13;&#10;WHEN &apos;Massachusetts&apos; THEN 21&#13;&#10;&#13;&#10;WHEN &apos;Michigan&apos; THEN 15&#13;&#10;&#13;&#10;WHEN &apos;Minnesota&apos; THEN 9&#13;&#10;&#13;&#10;WHEN &apos;Mississippi&apos; THEN 13&#13;&#10;&#13;&#10;WHEN &apos;Missouri&apos; THEN 11&#13;&#10;&#13;&#10;WHEN &apos;Montana&apos; THEN 5&#13;&#10;&#13;&#10;WHEN &apos;Nebraska (Statewide)&apos; THEN 9&#13;&#10;&#13;&#10;WHEN &apos;Nebraska 1st Congressional District&apos; THEN 22&#13;&#10;&#13;&#10;WHEN &apos;Nebraska 2nd Congressional District&apos; THEN 24&#13;&#10;&#13;&#10;WHEN &apos;Nebraska 3rd Congressional District&apos; THEN 26&#13;&#10;&#13;&#10;WHEN &apos;Nevada&apos; THEN 5&#13;&#10;&#13;&#10;WHEN &apos;New Hampshire&apos; THEN 22&#13;&#10;&#13;&#10;WHEN &apos;New Jersey&apos; THEN 20&#13;&#10;&#13;&#10;WHEN &apos;New Mexico&apos; THEN 7&#13;&#10;&#13;&#10;WHEN &apos;New York&apos; THEN 19&#13;&#10;&#13;&#10;WHEN &apos;North Carolina&apos; THEN 18&#13;&#10;&#13;&#10;WHEN &apos;North Dakota&apos; THEN 7&#13;&#10;&#13;&#10;WHEN &apos;Ohio&apos; THEN 16&#13;&#10;&#13;&#10;WHEN &apos;Oklahoma&apos; THEN 9&#13;&#10;&#13;&#10;WHEN &apos;Oregon&apos; THEN 3&#13;&#10;&#13;&#10;WHEN &apos;Pennsylvania&apos; THEN 18&#13;&#10;&#13;&#10;WHEN &apos;Rhode Island&apos; THEN 23&#13;&#10;&#13;&#10;WHEN &apos;South Carolina&apos; THEN 17&#13;&#10;&#13;&#10;WHEN &apos;South Dakota&apos; THEN 8&#13;&#10;&#13;&#10;WHEN &apos;Tennessee&apos; THEN 14&#13;&#10;&#13;&#10;WHEN &apos;Texas&apos; THEN 8&#13;&#10;&#13;&#10;WHEN &apos;Utah&apos; THEN 8&#13;&#10;&#13;&#10;WHEN &apos;Vermont&apos; THEN 20&#13;&#10;&#13;&#10;WHEN &apos;Virginia&apos; THEN 16&#13;&#10;&#13;&#10;WHEN &apos;Washington&apos; THEN 3&#13;&#10;&#13;&#10;WHEN &apos;West Virginia&apos; THEN 15&#13;&#10;&#13;&#10;WHEN &apos;Wisconsin&apos; THEN 11&#13;&#10;&#13;&#10;WHEN &apos;Wyoming&apos; THEN 6&#13;&#10;&#13;&#10;END' />
+      </column>
+      <column caption='Electoral Votes 2020_ Democrat' datatype='integer' name='[Electoral Votes 2020_ Republican (copy)_981503287515078669]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='{FIXED : SUM(IF [Calculation_981503287483379720] = &quot;Democrat&quot; THEN [Electoral Votes] ELSE 0 END)}' />
+      </column>
+      <column caption='Prediction1' datatype='integer' name='[Prediction]' role='measure' type='quantitative' />
+      <column caption='STATE (2020 predictions.csv)' datatype='string' name='[STATE (2020_predictions.csv)]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+      <column caption='STATE (2024 predictions.csv)' datatype='string' name='[STATE (2024_predictions.csv)]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+      <column caption='State' datatype='string' name='[STATE]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+      <_.fcp.ObjectModelTableType.true...column caption='2020_predictions.csv' datatype='table' name='[__tableau_internal_object_id__].[2020_predictions.csv_78A64299AE654D2C8678CC6A5B5290FF]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='2024_predictions.csv' datatype='table' name='[__tableau_internal_object_id__].[2024_predictions.csv_4EFD3596FC4D47DDAC56C9065884C046]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='Electoral_votes.csv' datatype='table' name='[__tableau_internal_object_id__].[Electoral_votes.csv_3A8D494DC776477399C120E22AFA9409]' role='measure' type='quantitative' />
+      <column-instance column='[Calculation_981503287474585600]' derivation='Attribute' name='[attr:Calculation_981503287474585600:nk]' pivot='key' type='nominal' />
+      <column-instance column='[Calculation_981503287483379720]' derivation='Attribute' name='[attr:Calculation_981503287483379720:nk]' pivot='key' type='nominal' />
+      <column-instance column='[Calculation_981503287488409610]' derivation='Attribute' name='[attr:Calculation_981503287488409610:nk]' pivot='key' type='nominal' />
+      <column-instance column='[Calculation_981503287474585600]' derivation='None' name='[none:Calculation_981503287474585600:nk]' pivot='key' type='nominal' />
+      <column-instance column='[Calculation_981503287483379720]' derivation='None' name='[none:Calculation_981503287483379720:nk]' pivot='key' type='nominal' />
+      <column-instance column='[Calculation_981503287488409610]' derivation='None' name='[none:Calculation_981503287488409610:nk]' pivot='key' type='nominal' />
+      <group caption='Action (State)' hidden='true' name='[Action (State)]' name-style='unqualified' user:auto-column='sheet_link'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[STATE]' />
+        </groupfilter>
+      </group>
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[attr:Calculation_981503287474585600:nk]' type='palette'>
+            <map to='#2d608a'>
+              <bucket>&quot;Democrat&quot;</bucket>
+            </map>
+            <map to='#b8163a'>
+              <bucket>&quot;Republican&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[attr:Calculation_981503287483379720:nk]' type='palette'>
+            <map to='#2d608a'>
+              <bucket>&quot;Democrat&quot;</bucket>
+            </map>
+            <map to='#b8163a'>
+              <bucket>&quot;Republican&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[attr:Calculation_981503287488409610:nk]' type='palette'>
+            <map to='#2d608a'>
+              <bucket>&quot;Democrat&quot;</bucket>
+            </map>
+            <map to='#b8163a'>
+              <bucket>&quot;Republican&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[none:Calculation_981503287483379720:nk]' type='palette'>
+            <map to='#305d8a'>
+              <bucket>&quot;Democrat&quot;</bucket>
+            </map>
+            <map to='#b8163a'>
+              <bucket>&quot;Republican&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[none:Calculation_981503287474585600:nk]' type='palette'>
+            <map to='#2d608a'>
+              <bucket>&quot;Democrat&quot;</bucket>
+            </map>
+            <map to='#b8163a'>
+              <bucket>&quot;Republican&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[none:Calculation_981503287488409610:nk]' type='palette'>
+            <map to='#2d608a'>
+              <bucket>&quot;Democrat&quot;</bucket>
+            </map>
+            <map to='#b8163a'>
+              <bucket>&quot;Republican&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <datasource-dependencies datasource='Parameters'>
+        <column caption='Select Worksheet' datatype='string' name='[Parameter 1]' param-domain-type='list' role='measure' type='nominal' value='&quot;2020 Predictions&quot;'>
+          <calculation class='tableau' formula='&quot;2020 Predictions&quot;' />
+        </column>
+      </datasource-dependencies>
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='2020_predictions.csv' id='2020_predictions.csv_78A64299AE654D2C8678CC6A5B5290FF'>
+            <properties context=''>
+              <relation connection='textscan.072whiu1wkquow1fxs9ds1tu0x64' name='2020_predictions.csv' table='[2020_predictions#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                  <column datatype='string' name='STATE' ordinal='0' />
+                  <column datatype='integer' name='Prediction' ordinal='1' />
+                  <column datatype='integer' name='Actual' ordinal='2' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+          <object caption='2024_predictions.csv' id='2024_predictions.csv_4EFD3596FC4D47DDAC56C9065884C046'>
+            <properties context=''>
+              <relation connection='textscan.072whiu1wkquow1fxs9ds1tu0x64' name='2024_predictions.csv' table='[2024_predictions#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                  <column datatype='string' name='STATE' ordinal='0' />
+                  <column datatype='integer' name='Prediction 2024' ordinal='1' />
+                  <column datatype='integer' name='2020 Actual' ordinal='2' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+          <object caption='Electoral_votes.csv' id='Electoral_votes.csv_3A8D494DC776477399C120E22AFA9409'>
+            <properties context=''>
+              <relation connection='textscan.072whiu1wkquow1fxs9ds1tu0x64' name='Electoral_votes.csv' table='[Electoral_votes#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                  <column datatype='string' name='STATE' ordinal='0' />
+                  <column datatype='integer' name='Electoral Votes' ordinal='1' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+        </objects>
+        <relationships>
+          <relationship>
+            <expression op='='>
+              <expression op='[STATE]' />
+              <expression op='[STATE (2020_predictions.csv)]' />
+            </expression>
+            <first-end-point object-id='Electoral_votes.csv_3A8D494DC776477399C120E22AFA9409' />
+            <second-end-point object-id='2020_predictions.csv_78A64299AE654D2C8678CC6A5B5290FF' />
+          </relationship>
+          <relationship>
+            <expression op='='>
+              <expression op='[STATE]' />
+              <expression op='[STATE (2024_predictions.csv)]' />
+            </expression>
+            <first-end-point object-id='Electoral_votes.csv_3A8D494DC776477399C120E22AFA9409' />
+            <second-end-point object-id='2024_predictions.csv_4EFD3596FC4D47DDAC56C9065884C046' />
+          </relationship>
+        </relationships>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+  </datasources>
+  <mapsources>
+    <mapsource name='Tableau' />
+  </mapsources>
+  <actions>
+    <action caption='Highlight 1 (generated)' name='[Action1_0478A175AC9149529A41CD2E7CC830E5]'>
+      <activation auto-clear='true' type='on-select' />
+      <source dashboard='2020 Results' type='sheet' />
+      <command command='tsc:brush'>
+        <param name='field-captions' value='Prediction (2020)' />
+        <param name='target' value='2020 Results' />
+      </command>
+    </action>
+    <action caption='Highlight 1 (generated) 1' name='[Action3_AF256FBF839346DE84C4D417818F7503]'>
+      <activation auto-clear='true' type='on-select' />
+      <source dashboard='2020 Prediction' type='sheet' />
+      <command command='tsc:brush'>
+        <param name='field-captions' value='Prediction (2020)' />
+        <param name='target' value='2020 Prediction' />
+      </command>
+    </action>
+    <action caption='Filter 1 (generated) 1' name='[Action4_98C44F299959471BAC2E2BB83151B567]'>
+      <activation auto-clear='true' type='on-select' />
+      <source dashboard='2020 Prediction' type='sheet' worksheet='2020 Predictions' />
+      <command command='tsc:tsl-filter'>
+        <param name='special-fields' value='all' />
+        <param name='target' value='2020 Prediction' />
+      </command>
+    </action>
+  </actions>
+  <worksheets>
+    <worksheet name='2020 Actual'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1' fontsize='20'>2020 Election Results</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='2024_predictions' name='federated.0wqtni31nyfki11dwyic81grhmkn' />
+          </datasources>
+          <mapsources>
+            <mapsource name='Tableau' />
+          </mapsources>
+          <datasource-dependencies datasource='federated.0wqtni31nyfki11dwyic81grhmkn'>
+            <column datatype='integer' name='[Actual]' role='measure' type='quantitative' />
+            <column caption='Election Results' datatype='string' name='[Calculation_981503287488409610]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='IF ([Actual] = 1) THEN &quot;Republican&quot;&#13;&#10;ELSE &quot;Democrat&quot;&#13;&#10;END' />
+            </column>
+            <column datatype='integer' name='[Electoral Votes]' role='measure' type='quantitative' />
+            <column caption='State' datatype='string' name='[STATE]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+            <column-instance column='[Calculation_981503287488409610]' derivation='Attribute' name='[attr:Calculation_981503287488409610:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Electoral Votes]' derivation='Attribute' name='[attr:Electoral Votes:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[STATE]' derivation='None' name='[none:STATE:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.0wqtni31nyfki11dwyic81grhmkn].[Longitude (generated)]' field-type='quantitative' max='44355832.593379661' min='7461108.3213279285' projection='EPSG:3857' range-type='fixed' scope='cols' type='space' />
+            <encoding attr='space' class='0' field='[federated.0wqtni31nyfki11dwyic81grhmkn].[Latitude (generated)]' field-type='quantitative' max='11990671.112873163' min='1675556.2453870636' projection='EPSG:3857' range-type='fixed' scope='rows' type='space' />
+          </style-rule>
+          <style-rule element='map-layer'>
+            <format attr='enabled' id='background' value='false' />
+            <format attr='enabled' id='barrier_line-land-polygon' value='false' />
+            <format attr='enabled' id='barrier_line-land-line' value='false' />
+            <format attr='enabled' id='national_park' value='false' />
+            <format attr='enabled' id='pitch' value='false' />
+            <format attr='enabled' id='industrial' value='false' />
+            <format attr='enabled' id='built-up-area' value='false' />
+            <format attr='enabled' id='water' value='false' />
+            <format attr='enabled' id='waterway-river-canal' value='false' />
+            <format attr='enabled' id='aeroway-polygon' value='false' />
+            <format attr='enabled' id='aeroway-runway' value='false' />
+            <format attr='enabled' id='aeroway-taxiway' value='false' />
+            <format attr='enabled' id='b01002_001e' value='false' />
+            <format attr='enabled' id='b01002_002e' value='false' />
+            <format attr='enabled' id='b01002_003e' value='false' />
+            <format attr='enabled' id='dp02_0001e' value='false' />
+            <format attr='enabled' id='dp02_0015e' value='false' />
+            <format attr='enabled' id='dp03_0027e_plus_dp03_0029e' value='false' />
+            <format attr='enabled' id='dp03_0028e' value='false' />
+            <format attr='enabled' id='dp03_0030e_plus_dp03_0031e' value='false' />
+            <format attr='enabled' id='dp03_0062e' value='false' />
+            <format attr='enabled' id='dp03_0088e' value='false' />
+            <format attr='enabled' id='dp04_0001e' value='false' />
+            <format attr='enabled' id='dp04_0046e' value='false' />
+            <format attr='enabled' id='dp04_0047e' value='false' />
+            <format attr='enabled' id='dp04_0089e' value='false' />
+            <format attr='enabled' id='dp05_0001e' value='false' />
+            <format attr='enabled' id='dp05_0002e_div_dp05_0003e' value='false' />
+            <format attr='enabled' id='dp05_0032e' value='false' />
+            <format attr='enabled' id='dp05_0033e' value='false' />
+            <format attr='enabled' id='dp05_0034e' value='false' />
+            <format attr='enabled' id='dp05_0039e' value='false' />
+            <format attr='enabled' id='dp05_0047e' value='false' />
+            <format attr='enabled' id='dp05_0053e' value='false' />
+            <format attr='enabled' id='dp05_0066e' value='false' />
+            <format attr='enabled' id='dp05_0077e' value='false' />
+          </style-rule>
+          <style-rule element='map'>
+            <format attr='washout' value='0.0' />
+          </style-rule>
+          <style-rule element='map-data-layer'>
+            <format attr='palette' value='tableau-map-blue-green-light' />
+            <format attr='geo-area-type' value='Tract' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0wqtni31nyfki11dwyic81grhmkn].[attr:Calculation_981503287488409610:nk]' />
+              <lod column='[federated.0wqtni31nyfki11dwyic81grhmkn].[none:STATE:nk]' />
+              <tooltip column='[federated.0wqtni31nyfki11dwyic81grhmkn].[attr:Electoral Votes:qk]' />
+              <geometry column='[federated.0wqtni31nyfki11dwyic81grhmkn].[Geometry (generated)]' />
+            </encodings>
+            <customized-tooltip>
+              <formatted-text>
+                <run bold='true' fontsize='14'><![CDATA[<[federated.0wqtni31nyfki11dwyic81grhmkn].[none:STATE:nk]>]]></run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#787878'>Number of Electoral Votes:&#9;</run>
+                <run bold='true'><![CDATA[<[federated.0wqtni31nyfki11dwyic81grhmkn].[attr:Electoral Votes:qk]>]]></run>
+                <run>Æ&#10;&#10;</run>
+                <run fontcolor='#787878'>2020 Election Results:&#9;</run>
+                <run bold='true'><![CDATA[<[federated.0wqtni31nyfki11dwyic81grhmkn].[attr:Calculation_981503287488409610:nk]>]]></run>
+                <run>Æ&#10;</run>
+              </formatted-text>
+            </customized-tooltip>
+          </pane>
+        </panes>
+        <rows>[federated.0wqtni31nyfki11dwyic81grhmkn].[Latitude (generated)]</rows>
+        <cols>[federated.0wqtni31nyfki11dwyic81grhmkn].[Longitude (generated)]</cols>
+      </table>
+      <simple-id uuid='{E23A8739-2305-4F54-A390-27320BE358D8}' />
+    </worksheet>
+    <worksheet name='2020 Electoral Votes (Predicted)'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='2024_predictions' name='federated.0wqtni31nyfki11dwyic81grhmkn' />
+          </datasources>
+          <mapsources>
+            <mapsource name='Tableau' />
+          </mapsources>
+          <datasource-dependencies datasource='federated.0wqtni31nyfki11dwyic81grhmkn'>
+            <column caption='2020 Party' datatype='string' name='[Calculation_981503287483379720]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='IF ([Prediction] = 1) THEN &quot;Republican&quot;&#13;&#10;ELSE &quot;Democrat&quot;&#13;&#10;END' />
+            </column>
+            <column datatype='integer' name='[Electoral Votes]' role='measure' type='quantitative' />
+            <column caption='Prediction1' datatype='integer' name='[Prediction]' role='measure' type='quantitative' />
+            <column-instance column='[Calculation_981503287483379720]' derivation='None' name='[none:Calculation_981503287483379720:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Electoral Votes]' derivation='Sum' name='[sum:Electoral Votes:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <manual-sort column='[federated.0wqtni31nyfki11dwyic81grhmkn].[none:Calculation_981503287483379720:nk]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;Republican&quot;</bucket>
+              <bucket>&quot;Democrat&quot;</bucket>
+            </dictionary>
+          </manual-sort>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.0wqtni31nyfki11dwyic81grhmkn].[sum:Electoral Votes:qk]' field-type='quantitative' max='538' min='0' range-type='fixed' scope='cols' type='space' />
+            <format attr='tick-color' field='[federated.0wqtni31nyfki11dwyic81grhmkn].[sum:Electoral Votes:qk]' value='#00000000' />
+            <format attr='display' class='0' field='[federated.0wqtni31nyfki11dwyic81grhmkn].[sum:Electoral Votes:qk]' scope='cols' value='false' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='height' value='169' />
+            <format attr='border-width' scope='cols' value='0' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='background-color' field='[federated.0wqtni31nyfki11dwyic81grhmkn].[sum:Electoral Votes:qk]' value='#ffffff' />
+          </style-rule>
+          <style-rule element='refline'>
+            <format attr='fill-above' id='refline0' value='#00000000' />
+            <format attr='fill-below' id='refline0' value='#00000000' />
+            <format attr='line-visibility' id='refline0' value='on' />
+            <format attr='line-pattern-only' id='refline0' value='dotted' />
+            <format attr='stroke-color' id='refline0' value='#818b91' />
+            <format attr='fill-above' id='refline1' value='#00000000' />
+            <format attr='fill-below' id='refline1' value='#00000000' />
+          </style-rule>
+          <style-rule element='gridline'>
+            <format attr='stroke-size' scope='cols' value='0' />
+            <format attr='line-visibility' scope='cols' value='off' />
+          </style-rule>
+          <style-rule element='map-layer'>
+            <format attr='enabled' id='background' value='false' />
+            <format attr='enabled' id='barrier_line-land-polygon' value='false' />
+            <format attr='enabled' id='barrier_line-land-line' value='false' />
+            <format attr='enabled' id='national_park' value='false' />
+            <format attr='enabled' id='pitch' value='false' />
+            <format attr='enabled' id='industrial' value='false' />
+            <format attr='enabled' id='built-up-area' value='false' />
+            <format attr='enabled' id='water' value='false' />
+            <format attr='enabled' id='waterway-river-canal' value='false' />
+            <format attr='enabled' id='aeroway-polygon' value='false' />
+            <format attr='enabled' id='aeroway-runway' value='false' />
+            <format attr='enabled' id='aeroway-taxiway' value='false' />
+            <format attr='enabled' id='b01002_001e' value='false' />
+            <format attr='enabled' id='b01002_002e' value='true' />
+            <format attr='enabled' id='b01002_003e' value='false' />
+            <format attr='enabled' id='dp02_0001e' value='false' />
+            <format attr='enabled' id='dp02_0015e' value='false' />
+            <format attr='enabled' id='dp03_0027e_plus_dp03_0029e' value='false' />
+            <format attr='enabled' id='dp03_0028e' value='false' />
+            <format attr='enabled' id='dp03_0030e_plus_dp03_0031e' value='false' />
+            <format attr='enabled' id='dp03_0062e' value='false' />
+            <format attr='enabled' id='dp03_0088e' value='false' />
+            <format attr='enabled' id='dp04_0001e' value='false' />
+            <format attr='enabled' id='dp04_0046e' value='false' />
+            <format attr='enabled' id='dp04_0047e' value='false' />
+            <format attr='enabled' id='dp04_0089e' value='false' />
+            <format attr='enabled' id='dp05_0001e' value='false' />
+            <format attr='enabled' id='dp05_0002e_div_dp05_0003e' value='false' />
+            <format attr='enabled' id='dp05_0032e' value='false' />
+            <format attr='enabled' id='dp05_0033e' value='false' />
+            <format attr='enabled' id='dp05_0034e' value='false' />
+            <format attr='enabled' id='dp05_0039e' value='false' />
+            <format attr='enabled' id='dp05_0047e' value='false' />
+            <format attr='enabled' id='dp05_0053e' value='false' />
+            <format attr='enabled' id='dp05_0066e' value='false' />
+            <format attr='enabled' id='dp05_0077e' value='false' />
+          </style-rule>
+          <style-rule element='map'>
+            <format attr='washout' value='0.0' />
+          </style-rule>
+          <style-rule element='map-data-layer'>
+            <format attr='palette' value='tableau-map-blue-green-light' />
+            <format attr='geo-area-type' value='Tract' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='3' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0wqtni31nyfki11dwyic81grhmkn].[none:Calculation_981503287483379720:nk]' />
+            </encodings>
+            <reference-line axis-column='[federated.0wqtni31nyfki11dwyic81grhmkn].[sum:Electoral Votes:qk]' enable-instant-analytics='true' formula='constant' id='refline0' label-type='none' scope='per-pane' tooltip-type='none' value='270' value-column='[federated.0wqtni31nyfki11dwyic81grhmkn].[sum:Electoral Votes:qk]' z-order='1' />
+          </pane>
+        </panes>
+        <rows />
+        <cols>[federated.0wqtni31nyfki11dwyic81grhmkn].[sum:Electoral Votes:qk]</cols>
+        <mark-labels>
+          <mark-label id='0' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.0wqtni31nyfki11dwyic81grhmkn].[sum:Electoral Votes:qk]</field>
+                  </x-fields>
+                  <y-fields />
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.0wqtni31nyfki11dwyic81grhmkn].[none:Calculation_981503287483379720:nk]</field>
+                  <field>[federated.0wqtni31nyfki11dwyic81grhmkn].[sum:Electoral Votes:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>&quot;Democrat&quot;</value>
+                <value>272</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='1' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.0wqtni31nyfki11dwyic81grhmkn].[sum:Electoral Votes:qk]</field>
+                  </x-fields>
+                  <y-fields />
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.0wqtni31nyfki11dwyic81grhmkn].[none:Calculation_981503287483379720:nk]</field>
+                  <field>[federated.0wqtni31nyfki11dwyic81grhmkn].[sum:Electoral Votes:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>&quot;Republican&quot;</value>
+                <value>266</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+        </mark-labels>
+      </table>
+      <simple-id uuid='{C8308D83-5FFA-41C1-B52D-3A622AF8D332}' />
+    </worksheet>
+    <worksheet name='2020 Electoral Votes Actual'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='2024_predictions' name='federated.0wqtni31nyfki11dwyic81grhmkn' />
+          </datasources>
+          <mapsources>
+            <mapsource name='Tableau' />
+          </mapsources>
+          <datasource-dependencies datasource='federated.0wqtni31nyfki11dwyic81grhmkn'>
+            <column datatype='integer' name='[Actual]' role='measure' type='quantitative' />
+            <column caption='Election Results' datatype='string' name='[Calculation_981503287488409610]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='IF ([Actual] = 1) THEN &quot;Republican&quot;&#13;&#10;ELSE &quot;Democrat&quot;&#13;&#10;END' />
+            </column>
+            <column datatype='integer' name='[Electoral Votes]' role='measure' type='quantitative' />
+            <column-instance column='[Calculation_981503287488409610]' derivation='None' name='[none:Calculation_981503287488409610:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Electoral Votes]' derivation='Sum' name='[sum:Electoral Votes:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <manual-sort column='[federated.0wqtni31nyfki11dwyic81grhmkn].[none:Calculation_981503287488409610:nk]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;Republican&quot;</bucket>
+              <bucket>&quot;Democrat&quot;</bucket>
+            </dictionary>
+          </manual-sort>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.0wqtni31nyfki11dwyic81grhmkn].[sum:Electoral Votes:qk]' field-type='quantitative' max='538' min='0' range-type='fixed' scope='cols' type='space' />
+            <format attr='height' field='[federated.0wqtni31nyfki11dwyic81grhmkn].[sum:Electoral Votes:qk]' value='84' />
+            <format attr='display' class='0' field='[federated.0wqtni31nyfki11dwyic81grhmkn].[sum:Electoral Votes:qk]' scope='cols' value='false' />
+            <format attr='tick-color' field='[federated.0wqtni31nyfki11dwyic81grhmkn].[sum:Electoral Votes:qk]' value='#00000000' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='height' value='175' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='background-color' field='[federated.0wqtni31nyfki11dwyic81grhmkn].[sum:Electoral Votes:qk]' value='#ffffff' />
+          </style-rule>
+          <style-rule element='refline'>
+            <format attr='fill-above' id='refline0' value='#00000000' />
+            <format attr='fill-below' id='refline0' value='#00000000' />
+            <format attr='line-visibility' id='refline0' value='on' />
+            <format attr='line-pattern-only' id='refline0' value='dotted' />
+            <format attr='stroke-color' id='refline0' value='#818b91' />
+          </style-rule>
+          <style-rule element='gridline'>
+            <format attr='stroke-size' value='0' />
+          </style-rule>
+          <style-rule element='map-layer'>
+            <format attr='enabled' id='background' value='false' />
+            <format attr='enabled' id='barrier_line-land-polygon' value='false' />
+            <format attr='enabled' id='barrier_line-land-line' value='false' />
+            <format attr='enabled' id='national_park' value='false' />
+            <format attr='enabled' id='pitch' value='false' />
+            <format attr='enabled' id='industrial' value='false' />
+            <format attr='enabled' id='built-up-area' value='false' />
+            <format attr='enabled' id='water' value='false' />
+            <format attr='enabled' id='waterway-river-canal' value='false' />
+            <format attr='enabled' id='aeroway-polygon' value='false' />
+            <format attr='enabled' id='aeroway-runway' value='false' />
+            <format attr='enabled' id='aeroway-taxiway' value='false' />
+            <format attr='enabled' id='b01002_001e' value='false' />
+            <format attr='enabled' id='b01002_002e' value='true' />
+            <format attr='enabled' id='b01002_003e' value='false' />
+            <format attr='enabled' id='dp02_0001e' value='false' />
+            <format attr='enabled' id='dp02_0015e' value='false' />
+            <format attr='enabled' id='dp03_0027e_plus_dp03_0029e' value='false' />
+            <format attr='enabled' id='dp03_0028e' value='false' />
+            <format attr='enabled' id='dp03_0030e_plus_dp03_0031e' value='false' />
+            <format attr='enabled' id='dp03_0062e' value='false' />
+            <format attr='enabled' id='dp03_0088e' value='false' />
+            <format attr='enabled' id='dp04_0001e' value='false' />
+            <format attr='enabled' id='dp04_0046e' value='false' />
+            <format attr='enabled' id='dp04_0047e' value='false' />
+            <format attr='enabled' id='dp04_0089e' value='false' />
+            <format attr='enabled' id='dp05_0001e' value='false' />
+            <format attr='enabled' id='dp05_0002e_div_dp05_0003e' value='false' />
+            <format attr='enabled' id='dp05_0032e' value='false' />
+            <format attr='enabled' id='dp05_0033e' value='false' />
+            <format attr='enabled' id='dp05_0034e' value='false' />
+            <format attr='enabled' id='dp05_0039e' value='false' />
+            <format attr='enabled' id='dp05_0047e' value='false' />
+            <format attr='enabled' id='dp05_0053e' value='false' />
+            <format attr='enabled' id='dp05_0066e' value='false' />
+            <format attr='enabled' id='dp05_0077e' value='false' />
+          </style-rule>
+          <style-rule element='map'>
+            <format attr='washout' value='0.0' />
+          </style-rule>
+          <style-rule element='map-data-layer'>
+            <format attr='palette' value='tableau-map-blue-green-light' />
+            <format attr='geo-area-type' value='Tract' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='3' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0wqtni31nyfki11dwyic81grhmkn].[none:Calculation_981503287488409610:nk]' />
+            </encodings>
+            <reference-line axis-column='[federated.0wqtni31nyfki11dwyic81grhmkn].[sum:Electoral Votes:qk]' enable-instant-analytics='true' formula='constant' id='refline0' label-type='none' scope='per-pane' tooltip-type='none' value='270' value-column='[federated.0wqtni31nyfki11dwyic81grhmkn].[sum:Electoral Votes:qk]' z-order='1' />
+            <customized-tooltip>
+              <formatted-text>
+                <run fontcolor='#787878'>Party:&#9;</run>
+                <run bold='true'><![CDATA[<[federated.0wqtni31nyfki11dwyic81grhmkn].[none:Calculation_981503287488409610:nk]>]]></run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#787878'>Electoral Votes:&#9;</run>
+                <run bold='true'><![CDATA[<[federated.0wqtni31nyfki11dwyic81grhmkn].[sum:Electoral Votes:qk]>]]></run>
+              </formatted-text>
+            </customized-tooltip>
+            <style>
+              <style-rule element='pane'>
+                <format attr='minheight' value='-1' />
+                <format attr='maxheight' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols>[federated.0wqtni31nyfki11dwyic81grhmkn].[sum:Electoral Votes:qk]</cols>
+        <mark-labels>
+          <mark-label id='0' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.0wqtni31nyfki11dwyic81grhmkn].[sum:Electoral Votes:qk]</field>
+                  </x-fields>
+                  <y-fields />
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.0wqtni31nyfki11dwyic81grhmkn].[none:Calculation_981503287488409610:nk]</field>
+                  <field>[federated.0wqtni31nyfki11dwyic81grhmkn].[sum:Electoral Votes:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>&quot;Democrat&quot;</value>
+                <value>306</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='1' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.0wqtni31nyfki11dwyic81grhmkn].[sum:Electoral Votes:qk]</field>
+                  </x-fields>
+                  <y-fields />
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.0wqtni31nyfki11dwyic81grhmkn].[none:Calculation_981503287488409610:nk]</field>
+                  <field>[federated.0wqtni31nyfki11dwyic81grhmkn].[sum:Electoral Votes:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>&quot;Republican&quot;</value>
+                <value>232</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+        </mark-labels>
+      </table>
+      <simple-id uuid='{CC6F1625-D66B-4CA9-BE89-600082E4CBA2}' />
+    </worksheet>
+    <worksheet name='2020 Predictions'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1' fontsize='20'>2020 Election Predictions</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='2024_predictions' name='federated.0wqtni31nyfki11dwyic81grhmkn' />
+            <datasource name='Parameters' />
+          </datasources>
+          <mapsources>
+            <mapsource name='Tableau' />
+          </mapsources>
+          <datasource-dependencies datasource='Parameters'>
+            <column caption='Select Worksheet' datatype='string' name='[Parameter 1]' param-domain-type='list' role='measure' type='nominal' value='&quot;2020 Predictions&quot;'>
+              <calculation class='tableau' formula='&quot;2020 Predictions&quot;' />
+            </column>
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.0wqtni31nyfki11dwyic81grhmkn'>
+            <column datatype='integer' name='[2020 Actual]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[Actual]' role='measure' type='quantitative' />
+            <column caption='Prediction ' datatype='string' name='[Calculation_981503287474962433]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='IF (([2020 Actual] != [Prediction 2024]) OR ([Actual] != [Prediction])) THEN &quot;Predicted Incorrectly&quot;&#13;&#10;ELSE &quot;Predicted Correctly&quot;&#13;&#10;END' />
+            </column>
+            <column caption='Swap Worksheet' datatype='string' name='[Calculation_981503287479705605]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='[Parameters].[Parameter 1]' />
+            </column>
+            <column caption='2020 Party' datatype='string' name='[Calculation_981503287483379720]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='IF ([Prediction] = 1) THEN &quot;Republican&quot;&#13;&#10;ELSE &quot;Democrat&quot;&#13;&#10;END' />
+            </column>
+            <column datatype='integer' name='[Electoral Votes]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[Prediction 2024]' role='measure' type='quantitative' />
+            <column caption='Prediction1' datatype='integer' name='[Prediction]' role='measure' type='quantitative' />
+            <column caption='State' datatype='string' name='[STATE]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+            <column-instance column='[Calculation_981503287483379720]' derivation='Attribute' name='[attr:Calculation_981503287483379720:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Electoral Votes]' derivation='Attribute' name='[attr:Electoral Votes:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_981503287474962433]' derivation='None' name='[none:Calculation_981503287474962433:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_981503287479705605]' derivation='None' name='[none:Calculation_981503287479705605:nk]' pivot='key' type='nominal' />
+            <column-instance column='[STATE]' derivation='None' name='[none:STATE:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0wqtni31nyfki11dwyic81grhmkn].[none:Calculation_981503287474962433:nk]'>
+            <groupfilter function='level-members' level='[none:Calculation_981503287474962433:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.0wqtni31nyfki11dwyic81grhmkn].[none:Calculation_981503287479705605:nk]'>
+            <groupfilter function='member' level='[none:Calculation_981503287479705605:nk]' member='&quot;2020 Predictions&quot;' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.0wqtni31nyfki11dwyic81grhmkn].[none:Calculation_981503287479705605:nk]</column>
+            <column>[federated.0wqtni31nyfki11dwyic81grhmkn].[none:Calculation_981503287474962433:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.0wqtni31nyfki11dwyic81grhmkn].[Longitude (generated)]' field-type='quantitative' max='35047501.341699429' min='18423969.387467366' projection='EPSG:3857' range-type='fixed' scope='cols' type='space' />
+            <encoding attr='space' class='0' field='[federated.0wqtni31nyfki11dwyic81grhmkn].[Latitude (generated)]' field-type='quantitative' max='12558453.308843393' min='2134521.2427819241' projection='EPSG:3857' range-type='fixed' scope='rows' type='space' />
+          </style-rule>
+          <style-rule element='map-layer'>
+            <format attr='enabled' id='background' value='false' />
+            <format attr='enabled' id='barrier_line-land-polygon' value='false' />
+            <format attr='enabled' id='barrier_line-land-line' value='false' />
+            <format attr='enabled' id='national_park' value='false' />
+            <format attr='enabled' id='pitch' value='false' />
+            <format attr='enabled' id='industrial' value='false' />
+            <format attr='enabled' id='built-up-area' value='false' />
+            <format attr='enabled' id='water' value='false' />
+            <format attr='enabled' id='waterway-river-canal' value='false' />
+            <format attr='enabled' id='aeroway-polygon' value='false' />
+            <format attr='enabled' id='aeroway-runway' value='false' />
+            <format attr='enabled' id='aeroway-taxiway' value='false' />
+            <format attr='enabled' id='b01002_001e' value='false' />
+            <format attr='enabled' id='b01002_002e' value='false' />
+            <format attr='enabled' id='b01002_003e' value='false' />
+            <format attr='enabled' id='dp02_0001e' value='false' />
+            <format attr='enabled' id='dp02_0015e' value='false' />
+            <format attr='enabled' id='dp03_0027e_plus_dp03_0029e' value='false' />
+            <format attr='enabled' id='dp03_0028e' value='false' />
+            <format attr='enabled' id='dp03_0030e_plus_dp03_0031e' value='false' />
+            <format attr='enabled' id='dp03_0062e' value='false' />
+            <format attr='enabled' id='dp03_0088e' value='false' />
+            <format attr='enabled' id='dp04_0001e' value='false' />
+            <format attr='enabled' id='dp04_0046e' value='false' />
+            <format attr='enabled' id='dp04_0047e' value='false' />
+            <format attr='enabled' id='dp04_0089e' value='false' />
+            <format attr='enabled' id='dp05_0001e' value='false' />
+            <format attr='enabled' id='dp05_0002e_div_dp05_0003e' value='false' />
+            <format attr='enabled' id='dp05_0032e' value='false' />
+            <format attr='enabled' id='dp05_0033e' value='false' />
+            <format attr='enabled' id='dp05_0034e' value='false' />
+            <format attr='enabled' id='dp05_0039e' value='false' />
+            <format attr='enabled' id='dp05_0047e' value='false' />
+            <format attr='enabled' id='dp05_0053e' value='false' />
+            <format attr='enabled' id='dp05_0066e' value='false' />
+            <format attr='enabled' id='dp05_0077e' value='false' />
+          </style-rule>
+          <style-rule element='map'>
+            <format attr='washout' value='0.0' />
+          </style-rule>
+          <style-rule element='map-data-layer'>
+            <format attr='palette' value='tableau-map-blue-green-light' />
+            <format attr='geo-area-type' value='Tract' />
+          </style-rule>
+          <style-rule element='quick-filter'>
+            <format attr='title' field='[federated.0wqtni31nyfki11dwyic81grhmkn].[none:Calculation_981503287474962433:nk]' value='Prediction:'>
+              <formatted-text>
+                <run>Prediction:</run>
+              </formatted-text>
+            </format>
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0wqtni31nyfki11dwyic81grhmkn].[attr:Calculation_981503287483379720:nk]' />
+              <lod column='[federated.0wqtni31nyfki11dwyic81grhmkn].[none:STATE:nk]' />
+              <lod column='[federated.0wqtni31nyfki11dwyic81grhmkn].[attr:Electoral Votes:qk]' />
+              <geometry column='[federated.0wqtni31nyfki11dwyic81grhmkn].[Geometry (generated)]' />
+            </encodings>
+            <customized-tooltip>
+              <formatted-text>
+                <run bold='true' fontsize='14'><![CDATA[<[federated.0wqtni31nyfki11dwyic81grhmkn].[none:STATE:nk]>]]></run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#787878'>Number of Electoral Votes:&#9;</run>
+                <run bold='true'><![CDATA[<[federated.0wqtni31nyfki11dwyic81grhmkn].[attr:Electoral Votes:qk]>]]></run>
+                <run>Æ&#10;&#10;</run>
+                <run fontcolor='#787878'>2020 Prediction:&#9;</run>
+                <run bold='true'><![CDATA[<[federated.0wqtni31nyfki11dwyic81grhmkn].[attr:Calculation_981503287483379720:nk]>]]></run>
+                <run>Æ&#10;</run>
+              </formatted-text>
+            </customized-tooltip>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='false' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0wqtni31nyfki11dwyic81grhmkn].[Latitude (generated)]</rows>
+        <cols>[federated.0wqtni31nyfki11dwyic81grhmkn].[Longitude (generated)]</cols>
+      </table>
+      <simple-id uuid='{D765ED31-5110-4B35-9EF0-A96E9CC93A6C}' />
+    </worksheet>
+    <worksheet name='2024 Electoral Votes (Predicted)'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='2024_predictions' name='federated.0wqtni31nyfki11dwyic81grhmkn' />
+          </datasources>
+          <mapsources>
+            <mapsource name='Tableau' />
+          </mapsources>
+          <datasource-dependencies datasource='federated.0wqtni31nyfki11dwyic81grhmkn'>
+            <column caption='2024 Party' datatype='string' name='[Calculation_981503287474585600]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='IF ([Prediction 2024] = 1) THEN &quot;Republican&quot;&#13;&#10;ELSE &quot;Democrat&quot;&#13;&#10;END' />
+            </column>
+            <column datatype='integer' name='[Electoral Votes]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[Prediction 2024]' role='measure' type='quantitative' />
+            <column-instance column='[Calculation_981503287474585600]' derivation='None' name='[none:Calculation_981503287474585600:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Electoral Votes]' derivation='Sum' name='[sum:Electoral Votes:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <manual-sort column='[federated.0wqtni31nyfki11dwyic81grhmkn].[none:Calculation_981503287474585600:nk]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;Republican&quot;</bucket>
+              <bucket>&quot;Democrat&quot;</bucket>
+            </dictionary>
+          </manual-sort>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.0wqtni31nyfki11dwyic81grhmkn].[sum:Electoral Votes:qk]' field-type='quantitative' max='538' min='0' range-type='fixed' scope='cols' type='space' />
+            <format attr='tick-color' field='[federated.0wqtni31nyfki11dwyic81grhmkn].[sum:Electoral Votes:qk]' value='#00000000' />
+            <format attr='display' class='0' field='[federated.0wqtni31nyfki11dwyic81grhmkn].[sum:Electoral Votes:qk]' scope='cols' value='false' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='height' value='169' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='background-color' field='[federated.0wqtni31nyfki11dwyic81grhmkn].[sum:Electoral Votes:qk]' value='#ffffff' />
+          </style-rule>
+          <style-rule element='refline'>
+            <format attr='fill-above' id='refline0' value='#00000000' />
+            <format attr='fill-below' id='refline0' value='#00000000' />
+            <format attr='line-visibility' id='refline0' value='on' />
+            <format attr='line-pattern-only' id='refline0' value='dotted' />
+            <format attr='stroke-color' id='refline0' value='#818b91' />
+          </style-rule>
+          <style-rule element='gridline'>
+            <format attr='stroke-size' value='0' />
+          </style-rule>
+          <style-rule element='map-layer'>
+            <format attr='enabled' id='background' value='false' />
+            <format attr='enabled' id='barrier_line-land-polygon' value='false' />
+            <format attr='enabled' id='barrier_line-land-line' value='false' />
+            <format attr='enabled' id='national_park' value='false' />
+            <format attr='enabled' id='pitch' value='false' />
+            <format attr='enabled' id='industrial' value='false' />
+            <format attr='enabled' id='built-up-area' value='false' />
+            <format attr='enabled' id='water' value='false' />
+            <format attr='enabled' id='waterway-river-canal' value='false' />
+            <format attr='enabled' id='aeroway-polygon' value='false' />
+            <format attr='enabled' id='aeroway-runway' value='false' />
+            <format attr='enabled' id='aeroway-taxiway' value='false' />
+            <format attr='enabled' id='b01002_001e' value='false' />
+            <format attr='enabled' id='b01002_002e' value='true' />
+            <format attr='enabled' id='b01002_003e' value='false' />
+            <format attr='enabled' id='dp02_0001e' value='false' />
+            <format attr='enabled' id='dp02_0015e' value='false' />
+            <format attr='enabled' id='dp03_0027e_plus_dp03_0029e' value='false' />
+            <format attr='enabled' id='dp03_0028e' value='false' />
+            <format attr='enabled' id='dp03_0030e_plus_dp03_0031e' value='false' />
+            <format attr='enabled' id='dp03_0062e' value='false' />
+            <format attr='enabled' id='dp03_0088e' value='false' />
+            <format attr='enabled' id='dp04_0001e' value='false' />
+            <format attr='enabled' id='dp04_0046e' value='false' />
+            <format attr='enabled' id='dp04_0047e' value='false' />
+            <format attr='enabled' id='dp04_0089e' value='false' />
+            <format attr='enabled' id='dp05_0001e' value='false' />
+            <format attr='enabled' id='dp05_0002e_div_dp05_0003e' value='false' />
+            <format attr='enabled' id='dp05_0032e' value='false' />
+            <format attr='enabled' id='dp05_0033e' value='false' />
+            <format attr='enabled' id='dp05_0034e' value='false' />
+            <format attr='enabled' id='dp05_0039e' value='false' />
+            <format attr='enabled' id='dp05_0047e' value='false' />
+            <format attr='enabled' id='dp05_0053e' value='false' />
+            <format attr='enabled' id='dp05_0066e' value='false' />
+            <format attr='enabled' id='dp05_0077e' value='false' />
+          </style-rule>
+          <style-rule element='map'>
+            <format attr='washout' value='0.0' />
+          </style-rule>
+          <style-rule element='map-data-layer'>
+            <format attr='palette' value='tableau-map-blue-green-light' />
+            <format attr='geo-area-type' value='Tract' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='3' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0wqtni31nyfki11dwyic81grhmkn].[none:Calculation_981503287474585600:nk]' />
+            </encodings>
+            <reference-line axis-column='[federated.0wqtni31nyfki11dwyic81grhmkn].[sum:Electoral Votes:qk]' enable-instant-analytics='true' formula='constant' id='refline0' label-type='none' scope='per-pane' tooltip-type='none' value='270' value-column='[federated.0wqtni31nyfki11dwyic81grhmkn].[sum:Electoral Votes:qk]' z-order='1' />
+          </pane>
+        </panes>
+        <rows />
+        <cols>[federated.0wqtni31nyfki11dwyic81grhmkn].[sum:Electoral Votes:qk]</cols>
+        <mark-labels>
+          <mark-label id='0' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.0wqtni31nyfki11dwyic81grhmkn].[sum:Electoral Votes:qk]</field>
+                  </x-fields>
+                  <y-fields />
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.0wqtni31nyfki11dwyic81grhmkn].[none:Calculation_981503287474585600:nk]</field>
+                  <field>[federated.0wqtni31nyfki11dwyic81grhmkn].[sum:Electoral Votes:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>&quot;Democrat&quot;</value>
+                <value>279</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='1' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.0wqtni31nyfki11dwyic81grhmkn].[sum:Electoral Votes:qk]</field>
+                  </x-fields>
+                  <y-fields />
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.0wqtni31nyfki11dwyic81grhmkn].[none:Calculation_981503287474585600:nk]</field>
+                  <field>[federated.0wqtni31nyfki11dwyic81grhmkn].[sum:Electoral Votes:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>&quot;Republican&quot;</value>
+                <value>259</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+        </mark-labels>
+      </table>
+      <simple-id uuid='{FB4517FF-FB9A-4C06-9A9E-DB1E20626AC3}' />
+    </worksheet>
+    <worksheet name='2024 Predictions'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1' fontsize='26'>States predicted to change in 2024 presidential election</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='2024_predictions' name='federated.0wqtni31nyfki11dwyic81grhmkn' />
+          </datasources>
+          <mapsources>
+            <mapsource name='Tableau' />
+          </mapsources>
+          <datasource-dependencies datasource='federated.0wqtni31nyfki11dwyic81grhmkn'>
+            <column datatype='integer' name='[2020 Actual]' role='measure' type='quantitative' />
+            <column caption='2024 Party' datatype='string' name='[Calculation_981503287474585600]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='IF ([Prediction 2024] = 1) THEN &quot;Republican&quot;&#13;&#10;ELSE &quot;Democrat&quot;&#13;&#10;END' />
+            </column>
+            <column caption='Projected Change' datatype='string' name='[Calculation_981503287503241227]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='IF ([Prediction 2024] != [2020 Actual]) THEN &quot;Projected Change&quot;&#13;&#10;END' />
+            </column>
+            <column datatype='integer' name='[Electoral Votes]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[Prediction 2024]' role='measure' type='quantitative' />
+            <column caption='State' datatype='string' name='[STATE]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+            <column-instance column='[2020 Actual]' derivation='Attribute' name='[attr:2020 Actual:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_981503287474585600]' derivation='Attribute' name='[attr:Calculation_981503287474585600:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Electoral Votes]' derivation='Attribute' name='[attr:Electoral Votes:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_981503287503241227]' derivation='None' name='[none:Calculation_981503287503241227:nk]' pivot='key' type='nominal' />
+            <column-instance column='[STATE]' derivation='None' name='[none:STATE:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0wqtni31nyfki11dwyic81grhmkn].[none:Calculation_981503287503241227:nk]'>
+            <groupfilter function='member' level='[none:Calculation_981503287503241227:nk]' member='&quot;Projected Change&quot;' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.0wqtni31nyfki11dwyic81grhmkn].[none:Calculation_981503287503241227:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.0wqtni31nyfki11dwyic81grhmkn].[Longitude (generated)]' field-type='quantitative' max='-498720.11109469086' min='-20604874.112928569' projection='EPSG:3857' range-type='fixed' scope='cols' type='space' />
+            <encoding attr='space' class='0' field='[federated.0wqtni31nyfki11dwyic81grhmkn].[Latitude (generated)]' field-type='quantitative' max='9305136.5990044996' min='-28149.475632268703' projection='EPSG:3857' range-type='fixed' scope='rows' type='space' />
+          </style-rule>
+          <style-rule element='map-layer'>
+            <format attr='enabled' id='background' value='false' />
+            <format attr='enabled' id='barrier_line-land-polygon' value='false' />
+            <format attr='enabled' id='barrier_line-land-line' value='false' />
+            <format attr='enabled' id='national_park' value='false' />
+            <format attr='enabled' id='pitch' value='false' />
+            <format attr='enabled' id='industrial' value='false' />
+            <format attr='enabled' id='built-up-area' value='false' />
+            <format attr='enabled' id='water' value='false' />
+            <format attr='enabled' id='waterway-river-canal' value='false' />
+            <format attr='enabled' id='aeroway-polygon' value='false' />
+            <format attr='enabled' id='aeroway-runway' value='false' />
+            <format attr='enabled' id='aeroway-taxiway' value='false' />
+            <format attr='enabled' id='b01002_001e' value='false' />
+            <format attr='enabled' id='b01002_002e' value='false' />
+            <format attr='enabled' id='b01002_003e' value='false' />
+            <format attr='enabled' id='dp02_0001e' value='false' />
+            <format attr='enabled' id='dp02_0015e' value='false' />
+            <format attr='enabled' id='dp03_0027e_plus_dp03_0029e' value='false' />
+            <format attr='enabled' id='dp03_0028e' value='false' />
+            <format attr='enabled' id='dp03_0030e_plus_dp03_0031e' value='false' />
+            <format attr='enabled' id='dp03_0062e' value='false' />
+            <format attr='enabled' id='dp03_0088e' value='false' />
+            <format attr='enabled' id='dp04_0001e' value='false' />
+            <format attr='enabled' id='dp04_0046e' value='false' />
+            <format attr='enabled' id='dp04_0047e' value='false' />
+            <format attr='enabled' id='dp04_0089e' value='false' />
+            <format attr='enabled' id='dp05_0001e' value='false' />
+            <format attr='enabled' id='dp05_0002e_div_dp05_0003e' value='false' />
+            <format attr='enabled' id='dp05_0032e' value='false' />
+            <format attr='enabled' id='dp05_0033e' value='false' />
+            <format attr='enabled' id='dp05_0034e' value='false' />
+            <format attr='enabled' id='dp05_0039e' value='false' />
+            <format attr='enabled' id='dp05_0047e' value='false' />
+            <format attr='enabled' id='dp05_0053e' value='false' />
+            <format attr='enabled' id='dp05_0066e' value='false' />
+            <format attr='enabled' id='dp05_0077e' value='false' />
+          </style-rule>
+          <style-rule element='map'>
+            <format attr='washout' value='0.0' />
+          </style-rule>
+          <style-rule element='map-data-layer'>
+            <format attr='palette' value='tableau-map-blue-green-light' />
+            <format attr='geo-area-type' value='Tract' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0wqtni31nyfki11dwyic81grhmkn].[attr:Calculation_981503287474585600:nk]' />
+              <lod column='[federated.0wqtni31nyfki11dwyic81grhmkn].[none:STATE:nk]' />
+              <lod column='[federated.0wqtni31nyfki11dwyic81grhmkn].[attr:Electoral Votes:qk]' />
+              <tooltip column='[federated.0wqtni31nyfki11dwyic81grhmkn].[attr:2020 Actual:qk]' />
+              <geometry column='[federated.0wqtni31nyfki11dwyic81grhmkn].[Geometry (generated)]' />
+            </encodings>
+            <customized-tooltip>
+              <formatted-text>
+                <run bold='true' fontsize='14'><![CDATA[<[federated.0wqtni31nyfki11dwyic81grhmkn].[none:STATE:nk]>]]></run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#787878'>Number of Electoral Votes:&#9;</run>
+                <run bold='true'><![CDATA[<[federated.0wqtni31nyfki11dwyic81grhmkn].[attr:Electoral Votes:qk]>]]></run>
+                <run>Æ&#10;&#10;</run>
+                <run fontcolor='#666666'>2020 Actual:</run>
+                <run bold='true' fontcolor='#666666'><![CDATA[ <[federated.0wqtni31nyfki11dwyic81grhmkn].[attr:2020 Actual:qk]>]]></run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#787878'>2024 Prediction:&#9;</run>
+                <run bold='true'><![CDATA[<[federated.0wqtni31nyfki11dwyic81grhmkn].[attr:Calculation_981503287474585600:nk]>]]></run>
+                <run>Æ&#10;</run>
+              </formatted-text>
+            </customized-tooltip>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='false' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minheight' value='778' />
+                <format attr='maxheight' value='778' />
+                <format attr='minwidth' value='1676' />
+                <format attr='maxwidth' value='1676' />
+                <format attr='aspect' value='0' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0wqtni31nyfki11dwyic81grhmkn].[Latitude (generated)]</rows>
+        <cols>[federated.0wqtni31nyfki11dwyic81grhmkn].[Longitude (generated)]</cols>
+      </table>
+      <simple-id uuid='{38EF1D8E-F29C-48DE-BB7C-3481F0A7CB0F}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard name='2020 Prediction'>
+      <style />
+      <size sizing-mode='automatic' />
+      <datasources>
+        <datasource caption='2024_predictions' name='federated.0wqtni31nyfki11dwyic81grhmkn' />
+      </datasources>
+      <datasource-dependencies datasource='federated.0wqtni31nyfki11dwyic81grhmkn'>
+        <column caption='Prediction ' datatype='string' name='[Calculation_981503287474962433]' role='dimension' type='nominal'>
+          <calculation class='tableau' formula='IF (([2020 Actual] != [Prediction 2024]) OR ([Actual] != [Prediction])) THEN &quot;Predicted Incorrectly&quot;&#13;&#10;ELSE &quot;Predicted Correctly&quot;&#13;&#10;END' />
+        </column>
+        <column-instance column='[Calculation_981503287474962433]' derivation='None' name='[none:Calculation_981503287474962433:nk]' pivot='key' type='nominal' />
+      </datasource-dependencies>
+      <zones>
+        <zone _.fcp.SetMembershipControl.false...type='layout-basic' _.fcp.SetMembershipControl.true...type-v2='layout-basic' h='100000' id='4' w='100000' x='0' y='0'>
+          <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='65782' id='45' param='horz' w='99156' x='422' y='33332'>
+            <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='65782' id='43' param='horz' w='99156' x='422' y='33332'>
+              <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='65782' id='40' param='horz' w='99156' x='422' y='33332'>
+                <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='65782' id='38' param='horz' w='99156' x='422' y='33332'>
+                  <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='65782' id='35' param='vert' w='99156' x='422' y='33332'>
+                    <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='65782' id='33' param='vert' w='99156' x='422' y='33332'>
+                      <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='65782' id='31' param='horz' w='99156' x='422' y='33332'>
+                        <zone _.fcp.SetMembershipControl.false...type='layout-basic' _.fcp.SetMembershipControl.true...type-v2='layout-basic' h='65782' id='29' w='99156' x='422' y='33332'>
+                          <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='65782' id='23' param='horz' w='99156' x='422' y='33332'>
+                            <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='65782' id='21' param='horz' w='99156' x='422' y='33332'>
+                              <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='65782' id='17' param='vert' w='99156' x='422' y='33332'>
+                                <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='65782' id='15' param='horz' w='99156' x='422' y='33332'>
+                                  <zone _.fcp.SetMembershipControl.false...type='layout-basic' _.fcp.SetMembershipControl.true...type-v2='layout-basic' h='65782' id='13' w='99156' x='422' y='33332'>
+                                    <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='65782' id='7' param='horz' w='99156' x='422' y='33332'>
+                                      <zone _.fcp.SetMembershipControl.false...type='layout-basic' _.fcp.SetMembershipControl.true...type-v2='layout-basic' h='65782' id='5' w='99156' x='422' y='33332'>
+                                        <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='65782' id='11' param='vert' w='99156' x='422' y='33332'>
+                                          <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='65782' id='18' param='vert' w='99156' x='422' y='33332'>
+                                            <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='65782' id='25' param='vert' w='99156' x='422' y='33332'>
+                                              <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='65782' id='48' param='horz' w='99156' x='422' y='33332'>
+                                                <zone fixed-size='851' h='65782' id='41' is-fixed='true' name='2020 Predictions' w='99156' x='422' y='33332'>
+                                                  <layout-cache minheight='253' minwidth='202' type-h='scalable' type-w='scalable' />
+                                                  <zone-style>
+                                                    <format attr='border-color' value='#000000' />
+                                                    <format attr='border-style' value='none' />
+                                                    <format attr='border-width' value='0' />
+                                                    <format attr='margin' value='4' />
+                                                  </zone-style>
+                                                </zone>
+                                              </zone>
+                                            </zone>
+                                          </zone>
+                                        </zone>
+                                      </zone>
+                                    </zone>
+                                  </zone>
+                                </zone>
+                              </zone>
+                            </zone>
+                          </zone>
+                        </zone>
+                      </zone>
+                    </zone>
+                  </zone>
+                </zone>
+              </zone>
+            </zone>
+          </zone>
+          <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='24140' id='47' param='vert' w='99156' x='422' y='886'>
+            <zone h='24140' id='49' name='2020 Electoral Votes (Predicted)' w='99156' x='422' y='886'>
+              <layout-cache fixed-size-h='212' type-h='fixed' type-w='fixed' />
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='4' />
+              </zone-style>
+            </zone>
+          </zone>
+          <zone _.fcp.SetMembershipControl.false...type='filter' _.fcp.SetMembershipControl.true...type-v2='filter' h='8306' id='46' mode='dropdown' name='2020 Predictions' param='[federated.0wqtni31nyfki11dwyic81grhmkn].[none:Calculation_981503287474962433:nk]' values='database' w='99156' x='422' y='25026'>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='700' minheight='700' sizing-mode='vscroll' />
+          <zones>
+            <zone _.fcp.SetMembershipControl.false...type='layout-basic' _.fcp.SetMembershipControl.true...type-v2='layout-basic' h='100000' id='53' w='100000' x='0' y='0'>
+              <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='98476' id='52' param='vert' w='99166' x='417' y='762'>
+                <zone fixed-size='201' h='26191' id='49' is-fixed='true' name='2020 Electoral Votes (Predicted)' w='99166' x='417' y='5714'>
+                  <layout-cache fixed-size-h='267' type-h='fixed' type-w='fixed' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone _.fcp.SetMembershipControl.false...type='filter' _.fcp.SetMembershipControl.true...type-v2='filter' h='4952' id='46' mode='dropdown' name='2020 Predictions' param='[federated.0wqtni31nyfki11dwyic81grhmkn].[none:Calculation_981503287474962433:nk]' values='database' w='99166' x='417' y='762'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='65948' id='41' is-fixed='true' name='2020 Predictions' w='99166' x='417' y='33290'>
+                  <layout-cache minheight='253' minwidth='202' type-h='scalable' type-w='scalable' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{D1EB4BCB-75D6-4E06-97FF-619D78AF97EE}' />
+    </dashboard>
+    <dashboard name='2020 Results'>
+      <style />
+      <size sizing-mode='automatic' />
+      <zones>
+        <zone _.fcp.SetMembershipControl.false...type='layout-basic' _.fcp.SetMembershipControl.true...type-v2='layout-basic' h='100000' id='4' w='100000' x='0' y='0'>
+          <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='86601' id='51' param='horz' w='99156' x='422' y='12513'>
+            <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='86601' id='45' param='horz' w='99156' x='422' y='12513'>
+              <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='86601' id='43' param='horz' w='99156' x='422' y='12513'>
+                <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='86601' id='40' param='horz' w='99156' x='422' y='12513'>
+                  <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='86601' id='38' param='horz' w='99156' x='422' y='12513'>
+                    <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='86601' id='35' param='vert' w='99156' x='422' y='12513'>
+                      <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='86601' id='33' param='vert' w='99156' x='422' y='12513'>
+                        <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='86601' id='31' param='horz' w='99156' x='422' y='12513'>
+                          <zone _.fcp.SetMembershipControl.false...type='layout-basic' _.fcp.SetMembershipControl.true...type-v2='layout-basic' h='86601' id='29' w='99156' x='422' y='12513'>
+                            <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='86601' id='23' param='horz' w='99156' x='422' y='12513'>
+                              <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='86601' id='21' param='horz' w='99156' x='422' y='12513'>
+                                <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='86601' id='17' param='vert' w='99156' x='422' y='12513'>
+                                  <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='86601' id='15' param='horz' w='99156' x='422' y='12513'>
+                                    <zone _.fcp.SetMembershipControl.false...type='layout-basic' _.fcp.SetMembershipControl.true...type-v2='layout-basic' h='86601' id='13' w='99156' x='422' y='12513'>
+                                      <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='86601' id='7' param='horz' w='99156' x='422' y='12513'>
+                                        <zone _.fcp.SetMembershipControl.false...type='layout-basic' _.fcp.SetMembershipControl.true...type-v2='layout-basic' h='86601' id='5' w='99156' x='422' y='12513'>
+                                          <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='86601' id='11' param='vert' w='99156' x='422' y='12513'>
+                                            <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='86601' id='18' param='vert' w='99156' x='422' y='12513'>
+                                              <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='86601' id='25' param='vert' w='99156' x='422' y='12513'>
+                                                <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='86601' id='48' param='vert' w='99156' x='422' y='12513'>
+                                                  <zone fixed-size='330' h='37431' id='49' is-fixed='true' name='2020 Electoral Votes Actual' show-title='false' w='99156' x='422' y='12513'>
+                                                    <layout-cache type-h='fixed' type-w='fixed' />
+                                                    <zone-style>
+                                                      <format attr='border-color' value='#000000' />
+                                                      <format attr='border-style' value='none' />
+                                                      <format attr='border-width' value='0' />
+                                                      <format attr='margin' value='4' />
+                                                    </zone-style>
+                                                  </zone>
+                                                  <zone h='49170' id='26' name='2020 Actual' show-title='false' w='99156' x='422' y='49944'>
+                                                    <layout-cache minheight='201' minwidth='202' type-h='scalable' type-w='scalable' />
+                                                    <zone-style>
+                                                      <format attr='border-color' value='#000000' />
+                                                      <format attr='border-style' value='none' />
+                                                      <format attr='border-width' value='0' />
+                                                      <format attr='margin' value='4' />
+                                                    </zone-style>
+                                                  </zone>
+                                                </zone>
+                                              </zone>
+                                            </zone>
+                                          </zone>
+                                        </zone>
+                                      </zone>
+                                    </zone>
+                                  </zone>
+                                </zone>
+                              </zone>
+                            </zone>
+                          </zone>
+                        </zone>
+                      </zone>
+                    </zone>
+                  </zone>
+                </zone>
+              </zone>
+            </zone>
+          </zone>
+          <zone _.fcp.SetMembershipControl.false...type='text' _.fcp.SetMembershipControl.true...type-v2='text' h='11627' id='52' w='99156' x='422' y='886'>
+            <formatted-text>
+              <run bold='true' fontalignment='1' fontcolor='#000000' fontsize='24'>THE 2020 PRESIDENTIAL RACE</run>
+            </formatted-text>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='700' minheight='700' sizing-mode='vscroll' />
+          <zones>
+            <zone _.fcp.SetMembershipControl.false...type='layout-basic' _.fcp.SetMembershipControl.true...type-v2='layout-basic' h='100000' id='53' w='100000' x='0' y='0'>
+              <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='98228' id='54' param='vert' w='99086' x='457' y='886'>
+                <zone _.fcp.SetMembershipControl.false...type='text' _.fcp.SetMembershipControl.true...type-v2='text' h='11627' id='52' w='99086' x='457' y='886'>
+                  <formatted-text>
+                    <run bold='true' fontalignment='1' fontcolor='#000000' fontsize='24'>THE 2020 PRESIDENTIAL RACE</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='37431' id='49' is-fixed='true' name='2020 Electoral Votes Actual' show-title='false' w='99086' x='457' y='12513'>
+                  <layout-cache type-h='fixed' type-w='fixed' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='49170' id='26' is-fixed='true' name='2020 Actual' show-title='false' w='99086' x='457' y='49944'>
+                  <layout-cache minheight='201' minwidth='202' type-h='scalable' type-w='scalable' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{4DEEEB97-3436-4A3C-A9B4-F04AF71AF428}' />
+    </dashboard>
+    <dashboard name='2024 Prediction'>
+      <style />
+      <size sizing-mode='automatic' />
+      <zones>
+        <zone _.fcp.SetMembershipControl.false...type='layout-basic' _.fcp.SetMembershipControl.true...type-v2='layout-basic' h='100000' id='4' w='100000' x='0' y='0'>
+          <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='98228' id='10' param='horz' w='99156' x='422' y='886'>
+            <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='98228' id='7' param='horz' w='99156' x='422' y='886'>
+              <zone _.fcp.SetMembershipControl.false...type='layout-basic' _.fcp.SetMembershipControl.true...type-v2='layout-basic' h='98228' id='5' w='99156' x='422' y='886'>
+                <zone h='69989' id='3' name='2024 Predictions' w='99156' x='422' y='29125'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+                <zone h='28239' id='8' name='2024 Electoral Votes (Predicted)' show-title='false' w='99156' x='422' y='886'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+              </zone>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='700' minheight='700' sizing-mode='vscroll' />
+          <zones>
+            <zone _.fcp.SetMembershipControl.false...type='layout-basic' _.fcp.SetMembershipControl.true...type-v2='layout-basic' h='100000' id='14' w='100000' x='0' y='0'>
+              <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='98228' id='13' param='vert' w='99086' x='457' y='886'>
+                <zone fixed-size='218' h='28239' id='8' is-fixed='true' name='2024 Electoral Votes (Predicted)' show-title='false' w='99086' x='457' y='886'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='69989' id='3' is-fixed='true' name='2024 Predictions' w='99086' x='457' y='29125'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{C3939AA7-9739-4EE5-82CD-7217C6B1FCA9}' />
+    </dashboard>
+    <dashboard name='Story 1' type='storyboard'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1' fontsize='28'>Presidential Election Predictions</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <style />
+      <size maxheight='1080' maxwidth='1920' minheight='1080' minwidth='1920' preset-index='0' sizing-mode='fixed' />
+      <zones>
+        <zone _.fcp.SetMembershipControl.false...type='layout-basic' _.fcp.SetMembershipControl.true...type-v2='layout-basic' h='100000' id='2' w='100000' x='0' y='0'>
+          <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='98518' id='8' param='vert' removable='false' w='99166' x='417' y='741'>
+            <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='98518' id='1' param='vert' removable='false' w='99166' x='417' y='741'>
+              <zone _.fcp.SetMembershipControl.false...type='flipboard-nav' _.fcp.SetMembershipControl.true...type-v2='flipboard-nav' h='5833' id='4' paired-zone-id='5' removable='false' w='99166' x='417' y='741' />
+              <zone _.fcp.SetMembershipControl.false...type='flipboard' _.fcp.SetMembershipControl.true...type-v2='flipboard' h='92685' id='5' paired-zone-id='4' removable='false' w='99166' x='417' y='6574'>
+                <flipboard active-id='1' nav-type='dot' show-nav-arrows='false'>
+                  <story-points>
+                    <story-point caption='2020 Results' captured-sheet='2020 Results' id='1'>
+                      <capturedDeltas>
+                        <worksheet name='2020 Actual'>
+                          <style delta-type='added'>
+                            <style-rule element='axis'>
+                              <encoding attr='space' class='0' field='[federated.0wqtni31nyfki11dwyic81grhmkn].[Latitude (generated)]' field-type='quantitative' max='6399054.2983076498' min='1867055.7153993857' projection='EPSG:3857' range-type='fixed' scope='rows' type='space' />
+                              <encoding attr='space' class='0' field='[federated.0wqtni31nyfki11dwyic81grhmkn].[Longitude (generated)]' field-type='quantitative' max='37824635.640482292' min='21479865.242732156' projection='EPSG:3857' range-type='fixed' scope='cols' type='space' />
+                            </style-rule>
+                          </style>
+                        </worksheet>
+                        <worksheet name='2020 Predictions'>
+                          <filter class='categorical' column='[federated.0wqtni31nyfki11dwyic81grhmkn].[none:Calculation_981503287474962433:nk]'>
+                            <groupfilter function='level-members' level='[none:Calculation_981503287474962433:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+                          </filter>
+                          <style delta-type='added'>
+                            <style-rule element='axis'>
+                              <encoding attr='space' class='0' field='[federated.0wqtni31nyfki11dwyic81grhmkn].[Latitude (generated)]' field-type='quantitative' projection='EPSG:3857' scope='rows' type='space' />
+                              <encoding attr='space' class='0' field='[federated.0wqtni31nyfki11dwyic81grhmkn].[Longitude (generated)]' field-type='quantitative' projection='EPSG:3857' scope='cols' type='space' />
+                            </style-rule>
+                          </style>
+                        </worksheet>
+                        <worksheet name='2024 Predictions'>
+                          <filter class='categorical' column='[federated.0wqtni31nyfki11dwyic81grhmkn].[none:Calculation_981503287474962433:nk]'>
+                            <groupfilter function='member' level='[none:Calculation_981503287474962433:nk]' member='&quot;Predicted Incorrectly&quot;' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+                          </filter>
+                        </worksheet>
+                      </capturedDeltas>
+                    </story-point>
+                    <story-point caption='2020 ML Model Predictions' captured-sheet='2020 Prediction' id='3'>
+                      <capturedDeltas>
+                        <worksheet name='2020 Electoral Votes (Predicted)'>
+                          <selection-collection />
+                        </worksheet>
+                        <worksheet name='2020 Predictions'>
+                          <filter class='categorical' column='[federated.0wqtni31nyfki11dwyic81grhmkn].[none:Calculation_981503287474962433:nk]'>
+                            <groupfilter function='member' level='[none:Calculation_981503287474962433:nk]' member='&quot;Predicted Incorrectly&quot;' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+                          </filter>
+                          <style delta-type='added'>
+                            <style-rule element='axis'>
+                              <encoding attr='space' class='0' field='[federated.0wqtni31nyfki11dwyic81grhmkn].[Latitude (generated)]' field-type='quantitative' max='6731286.453383958' min='1446166.7158482308' projection='EPSG:3857' range-type='fixed' scope='rows' type='space' />
+                              <encoding attr='space' class='0' field='[federated.0wqtni31nyfki11dwyic81grhmkn].[Longitude (generated)]' field-type='quantitative' max='38428847.87499103' min='21843025.098281145' projection='EPSG:3857' range-type='fixed' scope='cols' type='space' />
+                            </style-rule>
+                          </style>
+                        </worksheet>
+                      </capturedDeltas>
+                    </story-point>
+                    <story-point caption='2024 ML Model Predictions' captured-sheet='2024 Prediction' id='2'>
+                      <capturedDeltas>
+                        <worksheet name='2024 Predictions'>
+                          <style delta-type='added'>
+                            <style-rule element='axis'>
+                              <encoding attr='space' class='0' field='[federated.0wqtni31nyfki11dwyic81grhmkn].[Latitude (generated)]' field-type='quantitative' max='8692260.3486761041' min='-2103451.7997675571' projection='EPSG:3857' range-type='fixed' scope='rows' type='space' />
+                              <encoding attr='space' class='0' field='[federated.0wqtni31nyfki11dwyic81grhmkn].[Longitude (generated)]' field-type='quantitative' max='3234005.0803145878' min='-20022568.143765513' projection='EPSG:3857' range-type='fixed' scope='cols' type='space' />
+                            </style-rule>
+                          </style>
+                        </worksheet>
+                      </capturedDeltas>
+                    </story-point>
+                  </story-points>
+                </flipboard>
+              </zone>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+      </zones>
+      <simple-id uuid='{66E0CE85-C128-4B97-9B47-380F644BE256}' />
+    </dashboard>
+  </dashboards>
+  <windows show-side-pane='false' source-height='30'>
+    <window class='worksheet' name='2020 Actual'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.0wqtni31nyfki11dwyic81grhmkn].[attr:Calculation_981503287488409610:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <floating-toolbar-visibility value='1' />
+      </viewpoint>
+      <simple-id uuid='{32D8AFBE-A855-4A21-96AB-20320D954E32}' />
+    </window>
+    <window class='worksheet' name='2020 Electoral Votes Actual'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='3' param='[federated.0wqtni31nyfki11dwyic81grhmkn].[none:Calculation_981503287488409610:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{F945A362-7DD1-4BA7-BE75-0D6A8786FB39}' />
+    </window>
+    <window class='worksheet' name='2020 Predictions'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{4981F1C6-A1E7-4C23-8CCC-CA8ABA9A0306}' />
+    </window>
+    <window class='worksheet' name='2020 Electoral Votes (Predicted)'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='3' param='[federated.0wqtni31nyfki11dwyic81grhmkn].[none:Calculation_981503287483379720:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{517DAECB-375F-45E1-B882-644E809F0291}' />
+    </window>
+    <window class='worksheet' name='2024 Predictions'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card mode='dropdown' param='[federated.0wqtni31nyfki11dwyic81grhmkn].[none:Calculation_981503287503241227:nk]' type='filter' values='relevant' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{23D31AEF-2A73-429B-9698-1762B341BFC4}' />
+    </window>
+    <window class='worksheet' name='2024 Electoral Votes (Predicted)'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='3' param='[federated.0wqtni31nyfki11dwyic81grhmkn].[none:Calculation_981503287474585600:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{1B53CEEC-F462-4D5A-AC5F-D98E8B417F44}' />
+    </window>
+    <window class='dashboard' name='2020 Results'>
+      <viewpoints>
+        <viewpoint name='2020 Actual'>
+          <zoom type='entire-view' />
+          <default-map-tool-selection tool='16' />
+        </viewpoint>
+        <viewpoint name='2020 Electoral Votes Actual' />
+      </viewpoints>
+      <active id='49' />
+      <simple-id uuid='{B5052F02-1029-4334-BB3F-7AC9197AC4BF}' />
+    </window>
+    <window class='dashboard' name='2020 Prediction'>
+      <viewpoints>
+        <viewpoint name='2020 Electoral Votes (Predicted)' />
+        <viewpoint name='2020 Predictions'>
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
+      <active id='46' />
+      <simple-id uuid='{C00065B1-3256-4469-8A02-1D33DDA864E0}' />
+    </window>
+    <window class='dashboard' name='2024 Prediction'>
+      <viewpoints>
+        <viewpoint name='2024 Electoral Votes (Predicted)' />
+        <viewpoint name='2024 Predictions'>
+          <zoom type='entire-view' />
+          <default-map-tool-selection tool='1' />
+        </viewpoint>
+      </viewpoints>
+      <active id='3' />
+      <simple-id uuid='{980CBB41-2EC9-4325-95FC-EACAC8D62CFC}' />
+    </window>
+    <window class='dashboard' maximized='true' name='Story 1'>
+      <viewpoints />
+      <active id='-1' />
+      <simple-id uuid='{C7EE9645-6E52-4032-A02A-772DBD6931B1}' />
+    </window>
+  </windows>
+</workbook>
