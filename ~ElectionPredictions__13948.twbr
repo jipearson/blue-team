@@ -1,13 +1,14 @@
 <?xml version='1.0' encoding='utf-8' ?>
 
 <!-- build 20211.21.0420.1112                               -->
-<workbook source-build='2021.1.1 (20211.21.0420.1112)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+<workbook source-build='2021.1.1 (20211.21.0420.1112)' source-platform='win' version='18.1' xml:base='https://public.tableau.com' xmlns:user='http://www.tableausoftware.com/xml/user'>
   <document-format-change-manifest>
     <AutoCreateAndUpdateDSDPhoneLayouts />
     <CustomReferenceLineTooltips />
     <MapboxVectorStylesAndLayers />
     <_.fcp.MarkAnimation.true...MarkAnimation />
     <_.fcp.ObjectModelEncapsulateLegacy.true...ObjectModelEncapsulateLegacy />
+    <_.fcp.ObjectModelExtractV2.true...ObjectModelExtractV2 />
     <_.fcp.ObjectModelTableType.true...ObjectModelTableType />
     <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel />
     <_.fcp.SetMembershipControl.true...SetMembershipControl />
@@ -16,6 +17,7 @@
     <WindowsPersistSimpleIdentifiers />
     <ZoneBackgroundTransparency />
   </document-format-change-manifest>
+  <repository-location id='ElectionPredictions_16214580151030' path='/workbooks' revision='1.1' />
   <preferences>
     <preference name='ui.encoding.shelf.height' value='24' />
     <preference name='ui.shelf.height' value='26' />
@@ -42,7 +44,7 @@
       <connection class='federated'>
         <named-connections>
           <named-connection caption='Presidential_Election_Predictions' name='textscan.072whiu1wkquow1fxs9ds1tu0x64'>
-            <connection class='textscan' directory='C:/Users/tyler/repos/bootcamp-homework/blue-team' filename='Electoral_votes.csv' password='' server='' />
+            <connection class='textscan' directory='C:/Users/tyler/repos/bootcamp-homework/blue-team' filename='Electoral_votes.csv' password='' server='' workgroup-auth-mode='as-is' />
           </named-connection>
         </named-connections>
         <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='textscan.072whiu1wkquow1fxs9ds1tu0x64' name='2020_predictions.csv' table='[2020_predictions#csv]' type='table'>
@@ -84,6 +86,7 @@
           <map key='[STATE (2024_predictions.csv)]' value='[2024_predictions.csv].[STATE]' />
           <map key='[STATE]' value='[Electoral_votes.csv].[STATE]' />
         </cols>
+        <refresh increment-key='' incremental-updates='false' />
         <metadata-records>
           <metadata-record class='capability'>
             <remote-name />
@@ -286,6 +289,143 @@
           <groupfilter function='level-members' level='[STATE]' />
         </groupfilter>
       </group>
+      <extract _.fcp.ObjectModelExtractV2.true...object-id='' count='-1' enabled='true' units='records'>
+        <connection access_mode='readonly' authentication='auth-none' author-locale='en_US' class='hyper' dbname='C:/Users/tyler/Documents/My Tableau Repository/Datasources/2024_predictions.hyper' default-settings='yes' schema='Extract' sslmode='' tablename='Extract' update-time='' username='tableau_internal_user'>
+          <_.fcp.ObjectModelEncapsulateLegacy.false...relation name='2020_predictions.csv_78A64299AE654D2C8678CC6A5B5290FF' table='[Extract].[2020_predictions.csv_78A64299AE654D2C8678CC6A5B5290FF]' type='table' />
+          <_.fcp.ObjectModelEncapsulateLegacy.true...relation type='collection'>
+            <relation name='Electoral_votes.csv_3A8D494DC776477399C120E22AFA9409' table='[Extract].[Electoral_votes.csv_3A8D494DC776477399C120E22AFA9409]' type='table' />
+            <relation name='2020_predictions.csv_78A64299AE654D2C8678CC6A5B5290FF' table='[Extract].[2020_predictions.csv_78A64299AE654D2C8678CC6A5B5290FF]' type='table' />
+            <relation name='2024_predictions.csv_4EFD3596FC4D47DDAC56C9065884C046' table='[Extract].[2024_predictions.csv_4EFD3596FC4D47DDAC56C9065884C046]' type='table' />
+          </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+          <cols>
+            <map key='[2020 Actual]' value='[2024_predictions.csv_4EFD3596FC4D47DDAC56C9065884C046].[2020 Actual]' />
+            <map key='[Actual]' value='[2020_predictions.csv_78A64299AE654D2C8678CC6A5B5290FF].[Actual]' />
+            <map key='[Electoral Votes]' value='[Electoral_votes.csv_3A8D494DC776477399C120E22AFA9409].[Electoral Votes]' />
+            <map key='[Prediction 2024]' value='[2024_predictions.csv_4EFD3596FC4D47DDAC56C9065884C046].[Prediction 2024]' />
+            <map key='[Prediction]' value='[2020_predictions.csv_78A64299AE654D2C8678CC6A5B5290FF].[Prediction]' />
+            <map key='[STATE (2020_predictions.csv)]' value='[2020_predictions.csv_78A64299AE654D2C8678CC6A5B5290FF].[STATE]' />
+            <map key='[STATE (2024_predictions.csv)]' value='[2024_predictions.csv_4EFD3596FC4D47DDAC56C9065884C046].[STATE]' />
+            <map key='[STATE]' value='[Electoral_votes.csv_3A8D494DC776477399C120E22AFA9409].[STATE]' />
+          </cols>
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>STATE</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[STATE]</local-name>
+              <parent-name>[Electoral_votes.csv_3A8D494DC776477399C120E22AFA9409]</parent-name>
+              <remote-alias>STATE</remote-alias>
+              <ordinal>0</ordinal>
+              <family>Electoral_votes.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>51</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Electoral_votes.csv_3A8D494DC776477399C120E22AFA9409]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Electoral Votes</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Electoral Votes]</local-name>
+              <parent-name>[Electoral_votes.csv_3A8D494DC776477399C120E22AFA9409]</parent-name>
+              <remote-alias>Electoral Votes</remote-alias>
+              <ordinal>1</ordinal>
+              <family>Electoral_votes.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>19</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Electoral_votes.csv_3A8D494DC776477399C120E22AFA9409]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>STATE</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[STATE (2020_predictions.csv)]</local-name>
+              <parent-name>[2020_predictions.csv_78A64299AE654D2C8678CC6A5B5290FF]</parent-name>
+              <remote-alias>STATE</remote-alias>
+              <ordinal>2</ordinal>
+              <family>2020_predictions.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>51</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[2020_predictions.csv_78A64299AE654D2C8678CC6A5B5290FF]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Prediction</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Prediction]</local-name>
+              <parent-name>[2020_predictions.csv_78A64299AE654D2C8678CC6A5B5290FF]</parent-name>
+              <remote-alias>Prediction</remote-alias>
+              <ordinal>3</ordinal>
+              <family>2020_predictions.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[2020_predictions.csv_78A64299AE654D2C8678CC6A5B5290FF]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Actual</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Actual]</local-name>
+              <parent-name>[2020_predictions.csv_78A64299AE654D2C8678CC6A5B5290FF]</parent-name>
+              <remote-alias>Actual</remote-alias>
+              <ordinal>4</ordinal>
+              <family>2020_predictions.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[2020_predictions.csv_78A64299AE654D2C8678CC6A5B5290FF]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>STATE</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[STATE (2024_predictions.csv)]</local-name>
+              <parent-name>[2024_predictions.csv_4EFD3596FC4D47DDAC56C9065884C046]</parent-name>
+              <remote-alias>STATE</remote-alias>
+              <ordinal>5</ordinal>
+              <family>2024_predictions.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>51</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[2024_predictions.csv_4EFD3596FC4D47DDAC56C9065884C046]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Prediction 2024</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Prediction 2024]</local-name>
+              <parent-name>[2024_predictions.csv_4EFD3596FC4D47DDAC56C9065884C046]</parent-name>
+              <remote-alias>Prediction 2024</remote-alias>
+              <ordinal>6</ordinal>
+              <family>2024_predictions.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[2024_predictions.csv_4EFD3596FC4D47DDAC56C9065884C046]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>2020 Actual</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[2020 Actual]</local-name>
+              <parent-name>[2024_predictions.csv_4EFD3596FC4D47DDAC56C9065884C046]</parent-name>
+              <remote-alias>2020 Actual</remote-alias>
+              <ordinal>7</ordinal>
+              <family>2024_predictions.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[2024_predictions.csv_4EFD3596FC4D47DDAC56C9065884C046]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
       <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
       <style>
         <style-rule element='mark'>
@@ -359,6 +499,9 @@
                 </columns>
               </relation>
             </properties>
+            <properties context='extract'>
+              <relation name='2020_predictions.csv_78A64299AE654D2C8678CC6A5B5290FF' table='[Extract].[2020_predictions.csv_78A64299AE654D2C8678CC6A5B5290FF]' type='table' />
+            </properties>
           </object>
           <object caption='2024_predictions.csv' id='2024_predictions.csv_4EFD3596FC4D47DDAC56C9065884C046'>
             <properties context=''>
@@ -370,6 +513,9 @@
                 </columns>
               </relation>
             </properties>
+            <properties context='extract'>
+              <relation name='2024_predictions.csv_4EFD3596FC4D47DDAC56C9065884C046' table='[Extract].[2024_predictions.csv_4EFD3596FC4D47DDAC56C9065884C046]' type='table' />
+            </properties>
           </object>
           <object caption='Electoral_votes.csv' id='Electoral_votes.csv_3A8D494DC776477399C120E22AFA9409'>
             <properties context=''>
@@ -379,6 +525,9 @@
                   <column datatype='integer' name='Electoral Votes' ordinal='1' />
                 </columns>
               </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Electoral_votes.csv_3A8D494DC776477399C120E22AFA9409' table='[Extract].[Electoral_votes.csv_3A8D494DC776477399C120E22AFA9409]' type='table' />
             </properties>
           </object>
         </objects>
@@ -464,8 +613,8 @@
         </view>
         <style>
           <style-rule element='axis'>
-            <encoding attr='space' class='0' field='[federated.0wqtni31nyfki11dwyic81grhmkn].[Longitude (generated)]' field-type='quantitative' max='44355832.593379661' min='7461108.3213279285' projection='EPSG:3857' range-type='fixed' scope='cols' type='space' />
-            <encoding attr='space' class='0' field='[federated.0wqtni31nyfki11dwyic81grhmkn].[Latitude (generated)]' field-type='quantitative' max='11990671.112873163' min='1675556.2453870636' projection='EPSG:3857' range-type='fixed' scope='rows' type='space' />
+            <encoding attr='space' class='0' field='[federated.0wqtni31nyfki11dwyic81grhmkn].[Longitude (generated)]' field-type='quantitative' max='37969621.657617576' min='21920712.70460631' projection='EPSG:3857' range-type='fixed' scope='cols' type='space' />
+            <encoding attr='space' class='0' field='[federated.0wqtni31nyfki11dwyic81grhmkn].[Latitude (generated)]' field-type='quantitative' max='6631325.3230021531' min='1775197.9542504968' projection='EPSG:3857' range-type='fixed' scope='rows' type='space' />
           </style-rule>
           <style-rule element='map-layer'>
             <format attr='enabled' id='background' value='false' />
@@ -559,15 +708,22 @@
             </column>
             <column datatype='integer' name='[Electoral Votes]' role='measure' type='quantitative' />
             <column caption='Prediction1' datatype='integer' name='[Prediction]' role='measure' type='quantitative' />
+            <column caption='State' datatype='string' name='[STATE]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
             <column-instance column='[Calculation_981503287483379720]' derivation='None' name='[none:Calculation_981503287483379720:nk]' pivot='key' type='nominal' />
             <column-instance column='[Electoral Votes]' derivation='Sum' name='[sum:Electoral Votes:qk]' pivot='key' type='quantitative' />
           </datasource-dependencies>
+          <filter class='categorical' column='[federated.0wqtni31nyfki11dwyic81grhmkn].[Action (State)]'>
+            <groupfilter function='level-members' level='[STATE]' user:ui-action-filter='[Action4_98C44F299959471BAC2E2BB83151B567]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
           <manual-sort column='[federated.0wqtni31nyfki11dwyic81grhmkn].[none:Calculation_981503287483379720:nk]' direction='ASC'>
             <dictionary>
               <bucket>&quot;Republican&quot;</bucket>
               <bucket>&quot;Democrat&quot;</bucket>
             </dictionary>
           </manual-sort>
+          <slices>
+            <column>[federated.0wqtni31nyfki11dwyic81grhmkn].[Action (State)]</column>
+          </slices>
           <aggregation value='true' />
         </view>
         <style>
@@ -915,7 +1071,7 @@
             <column-instance column='[STATE]' derivation='None' name='[none:STATE:nk]' pivot='key' type='nominal' />
           </datasource-dependencies>
           <filter class='categorical' column='[federated.0wqtni31nyfki11dwyic81grhmkn].[none:Calculation_981503287474962433:nk]'>
-            <groupfilter function='level-members' level='[none:Calculation_981503287474962433:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+            <groupfilter function='member' level='[none:Calculation_981503287474962433:nk]' member='&quot;Predicted Incorrectly&quot;' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
           </filter>
           <filter class='categorical' column='[federated.0wqtni31nyfki11dwyic81grhmkn].[none:Calculation_981503287479705605:nk]'>
             <groupfilter function='member' level='[none:Calculation_981503287479705605:nk]' member='&quot;2020 Predictions&quot;' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
@@ -928,8 +1084,8 @@
         </view>
         <style>
           <style-rule element='axis'>
-            <encoding attr='space' class='0' field='[federated.0wqtni31nyfki11dwyic81grhmkn].[Longitude (generated)]' field-type='quantitative' max='35047501.341699429' min='18423969.387467366' projection='EPSG:3857' range-type='fixed' scope='cols' type='space' />
-            <encoding attr='space' class='0' field='[federated.0wqtni31nyfki11dwyic81grhmkn].[Latitude (generated)]' field-type='quantitative' max='12558453.308843393' min='2134521.2427819241' projection='EPSG:3857' range-type='fixed' scope='rows' type='space' />
+            <encoding attr='space' class='0' field='[federated.0wqtni31nyfki11dwyic81grhmkn].[Longitude (generated)]' field-type='quantitative' max='37588253.246603973' min='21559724.960378058' projection='EPSG:3857' range-type='fixed' scope='cols' type='space' />
+            <encoding attr='space' class='0' field='[federated.0wqtni31nyfki11dwyic81grhmkn].[Latitude (generated)]' field-type='quantitative' max='6738694.567512529' min='2167691.251433156' projection='EPSG:3857' range-type='fixed' scope='rows' type='space' />
           </style-rule>
           <style-rule element='map-layer'>
             <format attr='enabled' id='background' value='false' />
@@ -1217,8 +1373,8 @@
         </view>
         <style>
           <style-rule element='axis'>
-            <encoding attr='space' class='0' field='[federated.0wqtni31nyfki11dwyic81grhmkn].[Longitude (generated)]' field-type='quantitative' max='-498720.11109469086' min='-20604874.112928569' projection='EPSG:3857' range-type='fixed' scope='cols' type='space' />
-            <encoding attr='space' class='0' field='[federated.0wqtni31nyfki11dwyic81grhmkn].[Latitude (generated)]' field-type='quantitative' max='9305136.5990044996' min='-28149.475632268703' projection='EPSG:3857' range-type='fixed' scope='rows' type='space' />
+            <encoding attr='space' class='0' field='[federated.0wqtni31nyfki11dwyic81grhmkn].[Longitude (generated)]' field-type='quantitative' max='-4135885.6405336671' min='-16971158.819373563' projection='EPSG:3857' range-type='fixed' scope='cols' type='space' />
+            <encoding attr='space' class='0' field='[federated.0wqtni31nyfki11dwyic81grhmkn].[Latitude (generated)]' field-type='quantitative' max='7914641.1273578359' min='2481647.5055687185' projection='EPSG:3857' range-type='fixed' scope='rows' type='space' />
           </style-rule>
           <style-rule element='map-layer'>
             <format attr='enabled' id='background' value='false' />
@@ -1302,8 +1458,8 @@
               <style-rule element='pane'>
                 <format attr='minheight' value='778' />
                 <format attr='maxheight' value='778' />
-                <format attr='minwidth' value='1676' />
-                <format attr='maxwidth' value='1676' />
+                <format attr='minwidth' value='1838' />
+                <format attr='maxwidth' value='1838' />
                 <format attr='aspect' value='0' />
               </style-rule>
             </style>
@@ -1330,27 +1486,27 @@
       </datasource-dependencies>
       <zones>
         <zone _.fcp.SetMembershipControl.false...type='layout-basic' _.fcp.SetMembershipControl.true...type-v2='layout-basic' h='100000' id='4' w='100000' x='0' y='0'>
-          <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='65782' id='45' param='horz' w='99156' x='422' y='33332'>
-            <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='65782' id='43' param='horz' w='99156' x='422' y='33332'>
-              <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='65782' id='40' param='horz' w='99156' x='422' y='33332'>
-                <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='65782' id='38' param='horz' w='99156' x='422' y='33332'>
-                  <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='65782' id='35' param='vert' w='99156' x='422' y='33332'>
-                    <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='65782' id='33' param='vert' w='99156' x='422' y='33332'>
-                      <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='65782' id='31' param='horz' w='99156' x='422' y='33332'>
-                        <zone _.fcp.SetMembershipControl.false...type='layout-basic' _.fcp.SetMembershipControl.true...type-v2='layout-basic' h='65782' id='29' w='99156' x='422' y='33332'>
-                          <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='65782' id='23' param='horz' w='99156' x='422' y='33332'>
-                            <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='65782' id='21' param='horz' w='99156' x='422' y='33332'>
-                              <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='65782' id='17' param='vert' w='99156' x='422' y='33332'>
-                                <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='65782' id='15' param='horz' w='99156' x='422' y='33332'>
-                                  <zone _.fcp.SetMembershipControl.false...type='layout-basic' _.fcp.SetMembershipControl.true...type-v2='layout-basic' h='65782' id='13' w='99156' x='422' y='33332'>
-                                    <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='65782' id='7' param='horz' w='99156' x='422' y='33332'>
-                                      <zone _.fcp.SetMembershipControl.false...type='layout-basic' _.fcp.SetMembershipControl.true...type-v2='layout-basic' h='65782' id='5' w='99156' x='422' y='33332'>
-                                        <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='65782' id='11' param='vert' w='99156' x='422' y='33332'>
-                                          <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='65782' id='18' param='vert' w='99156' x='422' y='33332'>
-                                            <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='65782' id='25' param='vert' w='99156' x='422' y='33332'>
-                                              <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='65782' id='48' param='horz' w='99156' x='422' y='33332'>
-                                                <zone fixed-size='851' h='65782' id='41' is-fixed='true' name='2020 Predictions' w='99156' x='422' y='33332'>
-                                                  <layout-cache minheight='253' minwidth='202' type-h='scalable' type-w='scalable' />
+          <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='59137' id='45' param='horz' w='99156' x='422' y='39977'>
+            <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='59137' id='43' param='horz' w='99156' x='422' y='39977'>
+              <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='59137' id='40' param='horz' w='99156' x='422' y='39977'>
+                <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='59137' id='38' param='horz' w='99156' x='422' y='39977'>
+                  <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='59137' id='35' param='vert' w='99156' x='422' y='39977'>
+                    <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='59137' id='33' param='vert' w='99156' x='422' y='39977'>
+                      <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='59137' id='31' param='horz' w='99156' x='422' y='39977'>
+                        <zone _.fcp.SetMembershipControl.false...type='layout-basic' _.fcp.SetMembershipControl.true...type-v2='layout-basic' h='59137' id='29' w='99156' x='422' y='39977'>
+                          <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='59137' id='23' param='horz' w='99156' x='422' y='39977'>
+                            <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='59137' id='21' param='horz' w='99156' x='422' y='39977'>
+                              <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='59137' id='17' param='vert' w='99156' x='422' y='39977'>
+                                <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='59137' id='15' param='horz' w='99156' x='422' y='39977'>
+                                  <zone _.fcp.SetMembershipControl.false...type='layout-basic' _.fcp.SetMembershipControl.true...type-v2='layout-basic' h='59137' id='13' w='99156' x='422' y='39977'>
+                                    <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='59137' id='7' param='horz' w='99156' x='422' y='39977'>
+                                      <zone _.fcp.SetMembershipControl.false...type='layout-basic' _.fcp.SetMembershipControl.true...type-v2='layout-basic' h='59137' id='5' w='99156' x='422' y='39977'>
+                                        <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='59137' id='11' param='vert' w='99156' x='422' y='39977'>
+                                          <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='59137' id='18' param='vert' w='99156' x='422' y='39977'>
+                                            <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='59137' id='25' param='vert' w='99156' x='422' y='39977'>
+                                              <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='59137' id='48' param='horz' w='99156' x='422' y='39977'>
+                                                <zone fixed-size='851' h='59137' id='41' is-fixed='true' name='2020 Predictions' show-title='false' w='99156' x='422' y='39977'>
+                                                  <layout-cache minheight='201' minwidth='202' type-h='scalable' type-w='scalable' />
                                                   <zone-style>
                                                     <format attr='border-color' value='#000000' />
                                                     <format attr='border-style' value='none' />
@@ -1377,8 +1533,8 @@
               </zone>
             </zone>
           </zone>
-          <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='24140' id='47' param='vert' w='99156' x='422' y='886'>
-            <zone h='24140' id='49' name='2020 Electoral Votes (Predicted)' w='99156' x='422' y='886'>
+          <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='25138' id='47' param='vert' w='99156' x='422' y='8194'>
+            <zone h='24363' id='49' name='2020 Electoral Votes (Predicted)' w='99156' x='422' y='8194'>
               <layout-cache fixed-size-h='212' type-h='fixed' type-w='fixed' />
               <zone-style>
                 <format attr='border-color' value='#000000' />
@@ -1388,7 +1544,20 @@
               </zone-style>
             </zone>
           </zone>
-          <zone _.fcp.SetMembershipControl.false...type='filter' _.fcp.SetMembershipControl.true...type-v2='filter' h='8306' id='46' mode='dropdown' name='2020 Predictions' param='[federated.0wqtni31nyfki11dwyic81grhmkn].[none:Calculation_981503287474962433:nk]' values='database' w='99156' x='422' y='25026'>
+          <zone _.fcp.SetMembershipControl.false...type='filter' _.fcp.SetMembershipControl.true...type-v2='filter' h='6645' id='46' mode='dropdown' name='2020 Predictions' param='[federated.0wqtni31nyfki11dwyic81grhmkn].[none:Calculation_981503287474962433:nk]' values='database' w='99156' x='422' y='33332'>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone _.fcp.SetMembershipControl.false...type='text' _.fcp.SetMembershipControl.true...type-v2='text' forceUpdate='true' h='7308' id='58' w='99156' x='422' y='886'>
+            <formatted-text>
+              <run bold='true' fontalignment='1' fontcolor='#000000' fontsize='20'>2020 Presidential Predictions</run>
+              <run fontalignment='1'>Æ&#10;</run>
+              <run>Æ&#10;</run>
+            </formatted-text>
             <zone-style>
               <format attr='border-color' value='#000000' />
               <format attr='border-style' value='none' />
@@ -1408,10 +1577,14 @@
         <devicelayout auto-generated='true' name='Phone'>
           <size maxheight='700' minheight='700' sizing-mode='vscroll' />
           <zones>
-            <zone _.fcp.SetMembershipControl.false...type='layout-basic' _.fcp.SetMembershipControl.true...type-v2='layout-basic' h='100000' id='53' w='100000' x='0' y='0'>
-              <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='98476' id='52' param='vert' w='99166' x='417' y='762'>
-                <zone fixed-size='201' h='26191' id='49' is-fixed='true' name='2020 Electoral Votes (Predicted)' w='99166' x='417' y='5714'>
-                  <layout-cache fixed-size-h='267' type-h='fixed' type-w='fixed' />
+            <zone _.fcp.SetMembershipControl.false...type='layout-basic' _.fcp.SetMembershipControl.true...type-v2='layout-basic' h='100000' id='60' w='100000' x='0' y='0'>
+              <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='98228' id='59' param='vert' w='99156' x='422' y='886'>
+                <zone _.fcp.SetMembershipControl.false...type='text' _.fcp.SetMembershipControl.true...type-v2='text' forceUpdate='true' h='7308' id='58' w='99156' x='422' y='886'>
+                  <formatted-text>
+                    <run bold='true' fontalignment='1' fontcolor='#000000' fontsize='20'>2020 Presidential Predictions</run>
+                    <run fontalignment='1'>Æ&#10;</run>
+                    <run>Æ&#10;</run>
+                  </formatted-text>
                   <zone-style>
                     <format attr='border-color' value='#000000' />
                     <format attr='border-style' value='none' />
@@ -1420,7 +1593,8 @@
                     <format attr='padding' value='0' />
                   </zone-style>
                 </zone>
-                <zone _.fcp.SetMembershipControl.false...type='filter' _.fcp.SetMembershipControl.true...type-v2='filter' h='4952' id='46' mode='dropdown' name='2020 Predictions' param='[federated.0wqtni31nyfki11dwyic81grhmkn].[none:Calculation_981503287474962433:nk]' values='database' w='99166' x='417' y='762'>
+                <zone fixed-size='186' h='24363' id='49' is-fixed='true' name='2020 Electoral Votes (Predicted)' w='99156' x='422' y='8194'>
+                  <layout-cache fixed-size-h='212' type-h='fixed' type-w='fixed' />
                   <zone-style>
                     <format attr='border-color' value='#000000' />
                     <format attr='border-style' value='none' />
@@ -1429,8 +1603,17 @@
                     <format attr='padding' value='0' />
                   </zone-style>
                 </zone>
-                <zone fixed-size='280' h='65948' id='41' is-fixed='true' name='2020 Predictions' w='99166' x='417' y='33290'>
-                  <layout-cache minheight='253' minwidth='202' type-h='scalable' type-w='scalable' />
+                <zone _.fcp.SetMembershipControl.false...type='filter' _.fcp.SetMembershipControl.true...type-v2='filter' h='6645' id='46' mode='dropdown' name='2020 Predictions' param='[federated.0wqtni31nyfki11dwyic81grhmkn].[none:Calculation_981503287474962433:nk]' values='database' w='99156' x='422' y='33332'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='59137' id='41' is-fixed='true' name='2020 Predictions' show-title='false' w='99156' x='422' y='39977'>
+                  <layout-cache minheight='201' minwidth='202' type-h='scalable' type-w='scalable' />
                   <zone-style>
                     <format attr='border-color' value='#000000' />
                     <format attr='border-style' value='none' />
@@ -1477,7 +1660,7 @@
                                             <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='86601' id='18' param='vert' w='99156' x='422' y='12513'>
                                               <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='86601' id='25' param='vert' w='99156' x='422' y='12513'>
                                                 <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='86601' id='48' param='vert' w='99156' x='422' y='12513'>
-                                                  <zone fixed-size='330' h='37431' id='49' is-fixed='true' name='2020 Electoral Votes Actual' show-title='false' w='99156' x='422' y='12513'>
+                                                  <zone fixed-size='200' h='23034' id='49' is-fixed='true' name='2020 Electoral Votes Actual' show-title='false' w='99156' x='422' y='12513'>
                                                     <layout-cache type-h='fixed' type-w='fixed' />
                                                     <zone-style>
                                                       <format attr='border-color' value='#000000' />
@@ -1486,7 +1669,7 @@
                                                       <format attr='margin' value='4' />
                                                     </zone-style>
                                                   </zone>
-                                                  <zone h='49170' id='26' name='2020 Actual' show-title='false' w='99156' x='422' y='49944'>
+                                                  <zone h='63567' id='26' name='2020 Actual' show-title='false' w='99156' x='422' y='35547'>
                                                     <layout-cache minheight='201' minwidth='202' type-h='scalable' type-w='scalable' />
                                                     <zone-style>
                                                       <format attr='border-color' value='#000000' />
@@ -1538,9 +1721,9 @@
         <devicelayout auto-generated='true' name='Phone'>
           <size maxheight='700' minheight='700' sizing-mode='vscroll' />
           <zones>
-            <zone _.fcp.SetMembershipControl.false...type='layout-basic' _.fcp.SetMembershipControl.true...type-v2='layout-basic' h='100000' id='53' w='100000' x='0' y='0'>
-              <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='98228' id='54' param='vert' w='99086' x='457' y='886'>
-                <zone _.fcp.SetMembershipControl.false...type='text' _.fcp.SetMembershipControl.true...type-v2='text' h='11627' id='52' w='99086' x='457' y='886'>
+            <zone _.fcp.SetMembershipControl.false...type='layout-basic' _.fcp.SetMembershipControl.true...type-v2='layout-basic' h='100000' id='59' w='100000' x='0' y='0'>
+              <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='98228' id='58' param='vert' w='99156' x='422' y='886'>
+                <zone _.fcp.SetMembershipControl.false...type='text' _.fcp.SetMembershipControl.true...type-v2='text' h='11627' id='52' w='99156' x='422' y='886'>
                   <formatted-text>
                     <run bold='true' fontalignment='1' fontcolor='#000000' fontsize='24'>THE 2020 PRESIDENTIAL RACE</run>
                   </formatted-text>
@@ -1552,7 +1735,7 @@
                     <format attr='padding' value='0' />
                   </zone-style>
                 </zone>
-                <zone fixed-size='280' h='37431' id='49' is-fixed='true' name='2020 Electoral Votes Actual' show-title='false' w='99086' x='457' y='12513'>
+                <zone fixed-size='176' h='23034' id='49' is-fixed='true' name='2020 Electoral Votes Actual' show-title='false' w='99156' x='422' y='12513'>
                   <layout-cache type-h='fixed' type-w='fixed' />
                   <zone-style>
                     <format attr='border-color' value='#000000' />
@@ -1562,7 +1745,7 @@
                     <format attr='padding' value='0' />
                   </zone-style>
                 </zone>
-                <zone fixed-size='280' h='49170' id='26' is-fixed='true' name='2020 Actual' show-title='false' w='99086' x='457' y='49944'>
+                <zone fixed-size='280' h='63567' id='26' is-fixed='true' name='2020 Actual' show-title='false' w='99156' x='422' y='35547'>
                   <layout-cache minheight='201' minwidth='202' type-h='scalable' type-w='scalable' />
                   <zone-style>
                     <format attr='border-color' value='#000000' />
@@ -1593,7 +1776,7 @@
           <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='98228' id='10' param='horz' w='99156' x='422' y='886'>
             <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='98228' id='7' param='horz' w='99156' x='422' y='886'>
               <zone _.fcp.SetMembershipControl.false...type='layout-basic' _.fcp.SetMembershipControl.true...type-v2='layout-basic' h='98228' id='5' w='99156' x='422' y='886'>
-                <zone h='69989' id='3' name='2024 Predictions' w='99156' x='422' y='29125'>
+                <zone h='67663' id='3' name='2024 Predictions' w='99156' x='422' y='31451'>
                   <zone-style>
                     <format attr='border-color' value='#000000' />
                     <format attr='border-style' value='none' />
@@ -1601,7 +1784,19 @@
                     <format attr='margin' value='4' />
                   </zone-style>
                 </zone>
-                <zone h='28239' id='8' name='2024 Electoral Votes (Predicted)' show-title='false' w='99156' x='422' y='886'>
+                <zone h='22259' id='8' name='2024 Electoral Votes (Predicted)' show-title='false' w='99156' x='422' y='9192'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+                <zone _.fcp.SetMembershipControl.false...type='text' _.fcp.SetMembershipControl.true...type-v2='text' forceUpdate='true' h='8306' id='19' w='99156' x='422' y='886'>
+                  <formatted-text>
+                    <run bold='true' fontalignment='1' fontcolor='#000000' fontsize='20'>2024 Presidential Predictions</run>
+                    <run fontalignment='1'>Æ&#10;&#10;</run>
+                  </formatted-text>
                   <zone-style>
                     <format attr='border-color' value='#000000' />
                     <format attr='border-style' value='none' />
@@ -1624,9 +1819,13 @@
         <devicelayout auto-generated='true' name='Phone'>
           <size maxheight='700' minheight='700' sizing-mode='vscroll' />
           <zones>
-            <zone _.fcp.SetMembershipControl.false...type='layout-basic' _.fcp.SetMembershipControl.true...type-v2='layout-basic' h='100000' id='14' w='100000' x='0' y='0'>
-              <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='98228' id='13' param='vert' w='99086' x='457' y='886'>
-                <zone fixed-size='218' h='28239' id='8' is-fixed='true' name='2024 Electoral Votes (Predicted)' show-title='false' w='99086' x='457' y='886'>
+            <zone _.fcp.SetMembershipControl.false...type='layout-basic' _.fcp.SetMembershipControl.true...type-v2='layout-basic' h='100000' id='21' w='100000' x='0' y='0'>
+              <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='98228' id='20' param='vert' w='99156' x='422' y='886'>
+                <zone _.fcp.SetMembershipControl.false...type='text' _.fcp.SetMembershipControl.true...type-v2='text' forceUpdate='true' h='8306' id='19' w='99156' x='422' y='886'>
+                  <formatted-text>
+                    <run bold='true' fontalignment='1' fontcolor='#000000' fontsize='20'>2024 Presidential Predictions</run>
+                    <run fontalignment='1'>Æ&#10;&#10;</run>
+                  </formatted-text>
                   <zone-style>
                     <format attr='border-color' value='#000000' />
                     <format attr='border-style' value='none' />
@@ -1635,7 +1834,16 @@
                     <format attr='padding' value='0' />
                   </zone-style>
                 </zone>
-                <zone fixed-size='280' h='69989' id='3' is-fixed='true' name='2024 Predictions' w='99086' x='457' y='29125'>
+                <zone fixed-size='170' h='22259' id='8' is-fixed='true' name='2024 Electoral Votes (Predicted)' show-title='false' w='99156' x='422' y='9192'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='67663' id='3' is-fixed='true' name='2024 Predictions' w='99156' x='422' y='31451'>
                   <zone-style>
                     <format attr='border-color' value='#000000' />
                     <format attr='border-style' value='none' />
@@ -1676,6 +1884,32 @@
                 <flipboard active-id='1' nav-type='dot' show-nav-arrows='false'>
                   <story-points>
                     <story-point caption='2020 Results' captured-sheet='2020 Results' id='1'>
+                      <currentDeltas>
+                        <worksheet name='2020 Actual'>
+                          <style delta-type='added'>
+                            <style-rule element='axis'>
+                              <encoding attr='space' class='0' field='[federated.0wqtni31nyfki11dwyic81grhmkn].[Latitude (generated)]' field-type='quantitative' max='7075284.0979912998' min='2686621.6416569036' projection='EPSG:3857' range-type='fixed' scope='rows' type='space' />
+                              <encoding attr='space' class='0' field='[federated.0wqtni31nyfki11dwyic81grhmkn].[Longitude (generated)]' field-type='quantitative' max='36276336.165236771' min='23609213.484852549' projection='EPSG:3857' range-type='fixed' scope='cols' type='space' />
+                            </style-rule>
+                          </style>
+                        </worksheet>
+                        <worksheet name='2020 Predictions'>
+                          <filter class='categorical' column='[federated.0wqtni31nyfki11dwyic81grhmkn].[none:Calculation_981503287474962433:nk]'>
+                            <groupfilter function='level-members' level='[none:Calculation_981503287474962433:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+                          </filter>
+                          <style delta-type='added'>
+                            <style-rule element='axis'>
+                              <encoding attr='space' class='0' field='[federated.0wqtni31nyfki11dwyic81grhmkn].[Latitude (generated)]' field-type='quantitative' projection='EPSG:3857' scope='rows' type='space' />
+                              <encoding attr='space' class='0' field='[federated.0wqtni31nyfki11dwyic81grhmkn].[Longitude (generated)]' field-type='quantitative' projection='EPSG:3857' scope='cols' type='space' />
+                            </style-rule>
+                          </style>
+                        </worksheet>
+                        <worksheet name='2024 Predictions'>
+                          <filter class='categorical' column='[federated.0wqtni31nyfki11dwyic81grhmkn].[none:Calculation_981503287474962433:nk]'>
+                            <groupfilter function='member' level='[none:Calculation_981503287474962433:nk]' member='&quot;Predicted Incorrectly&quot;' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+                          </filter>
+                        </worksheet>
+                      </currentDeltas>
                       <capturedDeltas>
                         <worksheet name='2020 Actual'>
                           <style delta-type='added'>
@@ -1912,7 +2146,7 @@
         </viewpoint>
         <viewpoint name='2020 Electoral Votes Actual' />
       </viewpoints>
-      <active id='49' />
+      <active id='26' />
       <simple-id uuid='{B5052F02-1029-4334-BB3F-7AC9197AC4BF}' />
     </window>
     <window class='dashboard' name='2020 Prediction'>
@@ -1920,12 +2154,13 @@
         <viewpoint name='2020 Electoral Votes (Predicted)' />
         <viewpoint name='2020 Predictions'>
           <zoom type='entire-view' />
+          <default-map-tool-selection tool='16' />
         </viewpoint>
       </viewpoints>
-      <active id='46' />
+      <active id='58' />
       <simple-id uuid='{C00065B1-3256-4469-8A02-1D33DDA864E0}' />
     </window>
-    <window class='dashboard' name='2024 Prediction'>
+    <window class='dashboard' maximized='true' name='2024 Prediction'>
       <viewpoints>
         <viewpoint name='2024 Electoral Votes (Predicted)' />
         <viewpoint name='2024 Predictions'>
@@ -1936,9 +2171,9 @@
       <active id='3' />
       <simple-id uuid='{980CBB41-2EC9-4325-95FC-EACAC8D62CFC}' />
     </window>
-    <window class='dashboard' maximized='true' name='Story 1'>
+    <window class='dashboard' name='Story 1'>
       <viewpoints />
-      <active id='-1' />
+      <active id='5' />
       <simple-id uuid='{C7EE9645-6E52-4032-A02A-772DBD6931B1}' />
     </window>
   </windows>
