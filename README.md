@@ -39,6 +39,16 @@ Throughout history we have seen changes in how different states vote in election
 
 ## Results
 
+After running our data through the model the results proved to be 96% accurate.
 
+![Classification_Report](https://github.com/jipearson/blue-team/blob/presentation/images/classification_report.png)
+
+Looking at the 2020 Presidential Election we managed to predict all states accurately with the exception of Georgia and Arizona. 
+
+(Insert tableau map image here)
+
+Using current trends we ran the model to predict the 2024 election and all results were the same with the exception of Georgia turning back to a red state. 
+
+(Insert tableau map image here)
 
 
