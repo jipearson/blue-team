@@ -1,30 +1,44 @@
 # Predicting Presidential Elections at the State Level
 ![](images/map_header.PNG)
 
-## Machine Learning Module
+# Project Overview
+
+Throughout history we have seen changes in how different states vote in elections. What makes a state red or blue? Our goal is to determine the answer to this question by using our data sources to see they somehow correlate with the outcome of previous elections. If accurate, we believe that we can utilize our model to predict future elections. 
+
+## Google Slides Presentation
+### [Link to Google Slides Presentation](https://docs.google.com/presentation/d/1Fi2ku2yF1nq2R5zSuyaotLsO4VyYtfnHJCpFY3X6e9w/edit?usp=sharing)
+
+![Gooogle_Slide_Presentation](https://github.com/jipearson/blue-team/blob/presentation/images/GoogleSlidesPresentation.jpg)
+
+## Tableau Dashboard
+### [Link to Tableau Dashboard](https://public.tableau.com/profile/tyler.foreman#!/vizhome/ElectionPredictions_16214580151030/Story1)
+
+![Tableau_Dashboard](https://github.com/jipearson/blue-team/blob/presentation/images/tableau_map.png)
 
 ## Database
 - ERD <br> ![](images/ERD.png)
-## Presentation (Google Slides)
-[Link to Google Slides Presentation](https://docs.google.com/presentation/d/1Fi2ku2yF1nq2R5zSuyaotLsO4VyYtfnHJCpFY3X6e9w/edit?usp=sharing)
 
-### Slide 1
-![Slide_1](https://github.com/jipearson/blue-team/blob/presentation/images/Slide_1.jpg)
+## Machine Learning Module
 
-### Slide 2
-![Slide_2](https://github.com/jipearson/blue-team/blob/presentation/images/Slide_2.jpg)
+### Scaled the data with MinMaxScaler
 
-### Slide 3
-![Slide_3](https://github.com/jipearson/blue-team/blob/presentation/images/Slide_3.png)
+![MinMaxScaler](https://github.com/jipearson/blue-team/blob/presentation/images/MinMaxScaler.png)
 
-### Slide 4
-![Slide_4](https://github.com/jipearson/blue-team/blob/presentation/images/Slide_4.jpg)
+### Created training and testing data
 
-### Slide 5
-![Slide_5](https://github.com/jipearson/blue-team/blob/presentation/images/Slide_5.png)
+![Training_Data](https://github.com/jipearson/blue-team/blob/presentation/images/training_data.png)
+![Testing_Data](https://github.com/jipearson/blue-team/blob/presentation/images/testing_data.png)
 
-### Slide 6
-![Slide_6](https://github.com/jipearson/blue-team/blob/presentation/images/Slide_6.png)
+### Split training and testing data / Use logistic regression to determine coefficients
+
+![Coefficients](https://github.com/jipearson/blue-team/blob/presentation/images/logisticreg_coefficients.png)
+
+### Use logistic regression to predict election outcome
+
+![prediction](https://github.com/jipearson/blue-team/blob/presentation/images/model_prediction.png)
+
+## Results
+
 
 
 
